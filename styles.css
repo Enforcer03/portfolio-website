@@ -1,0 +1,321 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-image: url('images/background.jpg'); /* Replace with the actual image file name */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y: auto;
+}
+.header {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 40px;
+background-color: #180f15; /* Dark brown photo palette background */
+color: #fff;
+position: fixed;
+top: 0;
+left: 0;
+width: 21%; /* Fixed width for the photo palette */
+height: 100%; /* Full height for the photo palette */
+overflow-y: auto; /* Enable scrolling for photo palette */
+border-radius: 20px; /* Rounded corners for the photo palette */
+}
+
+.header img {
+width: 80%; /* Adjust the size of the photo */
+height: auto;
+border-radius: 50%; /* Rounded corners for the photo */
+margin-bottom: 20px;
+}
+
+.header h1 {
+font-size: 28px;
+margin-bottom: 5px;
+color: #3cb03c; /* Green name color */
+}
+
+.header p {
+font-size: 18px;
+}
+
+.location-info {
+display: flex;
+align-items: center;
+margin-top: 10px;
+color: #f1f1f1; /* Light text color for location */
+}
+
+.location-info i {
+margin-right: 5px;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #007BFF;
+    font-size: 24px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+}
+
+.main-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-left: 25%; /* Shift content to the right to accommodate the photo palette */
+}
+
+
+    /* styles.css */
+
+/* About Me Section */
+/* styles.css */
+
+/* styles.css */
+
+/* About Me Section */
+.about-me {
+text-align: center;
+margin-bottom: 30px;
+font-family: "Your Fancy Font", cursive; /* Replace "Your Fancy Font" with the actual font you want to use */
+}
+
+.about-me h2 {
+font-size: 28px;
+margin-bottom: 10px;
+}
+
+.highlight {
+background-color: #FFDAB9; /* Peach highlight color */
+padding: 2px 4px;
+border-radius: 4px;
+}
+
+.typing-text {
+font-size: 18px;
+line-height: 1.6;
+white-space: nowrap; /* Prevent line breaks in the typing animation */
+overflow: hidden; /* Hide overflowing text during animation */
+}
+
+/* Blinking caret */
+.typing-text::after {
+content: "|";
+animation: blink-caret 0.75s step-end infinite;
+color: #333; /* Dark container background color */
+}
+
+
+
+.container {
+width: 80%;
+max-width: 800px;
+margin: 30px auto; /* Center the container */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Improved box shadow with higher elevation */
+border-radius: 15px; /* Slightly rounded corners */
+padding: 30px; /* Increased padding for better spacing */
+border: none; /* Remove borders */
+background-color: rgba(129, 51, 130, 0.5); /* Dark container background with transparency */
+background: linear-gradient(to bottom, rgba(51, 51, 51, 0.8), transparent);
+
+
+}
+
+
+/* @keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+} */
+
+.flicker-on-hover:hover {
+    animation: none; /* Disable the flicker animation on hover */
+    opacity: 1; /* Ensure full opacity on hover */
+}
+.container h2 {
+    font-size: 28px;
+    margin-bottom: 20px; /* Increased margin for better spacing */
+    color: #4bed6c; /* Dark blue heading color */
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5); /* White background with transparency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Your Fancy Font", cursive; /* Replace with the actual font you want to use */
+}
+
+.container p {
+font-size: 18px;
+line-height: 1.6;
+color: #f8f5f5; /* Light text color */
+}
+
+.container ul {
+list-style-type: disc;
+margin-left: 20px;
+color: #f1f1f1; /* Light text color for list items */
+}
+
+.container li {
+font-size: 18px;
+line-height: 1.6;
+}
+
+
+
+.section {
+padding: 20px;
+margin-bottom: 30px;
+background-color: #444; /* Dark section background */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+}
+
+.section h2 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.section p {
+font-size: 18px;
+line-height: 1.6;
+}
+
+.section-content {
+display: none;
+}
+
+.section.active .section-content {
+display: block;
+}
+
+.section-content-inner {
+background-color: #555; /* Dark section content background */
+border-radius: 10px;
+padding: 15px;
+margin-top: 10px;
+}
+
+.section-content-inner p {
+margin: 0;
+}
+
+.download-link {
+display: block;
+text-align: center;
+margin: 20px 0;
+font-size: 18px;
+color: #fff;
+background-color: #3cb03c; /* Green button background color */
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 10px;
+}
+
+.social-links {
+text-align: center;
+margin-top: 20px;
+}
+
+.social-links a {
+color: #007BFF;
+font-size: 24px;
+margin: 5px;
+text-decoration: none;
+}
+
+.social-links a:hover {
+color: #0056b3;
+}
+
+
+.highlights-section {
+    background-color: rgba(99, 26, 94, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+    border: 2px solid transparent; /* Add a transparent border initially */
+    border-radius: 10px;
+    transition: border-color 0.3s ease-in-out; /* Add transition effect to border color */
+}
+
+.highlights-section:hover {
+    border-color: rgba(50, 14, 44, 0.8); /* Make the border color visible on hover */
+}
+
+.highlights-section h2 {
+    color: #22e218;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.highlights {
+    display: flex;
+    justify-content: center; /* Center the highlights horizontally */
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px 0;
+    -webkit-overflow-scrolling: touch;
+    width: 100%; /* Ensure the highlights section takes up full width */
+    max-width: 100%; /* Allow the highlights section to be as wide as the screen */
+}
+
+.highlight {
+    width: 150px;
+    height: 200px;
+    margin: 0 20px; /* Add equal margin on both sides */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: rgba(50, 14, 44, 0); /* Set the background color to fully transparent */
+    overflow: hidden;
+    position: relative; /* Add positioning for pseudo-element */
+}
+
+.highlight::before {
+    content: '';
+    position: absolute;
+    top: -1px; /* Adjust position to overlap with container's border */
+    left: -1px; /* Adjust position to overlap with container's border */
+    width: calc(100% + 2px); /* Extend the width to cover the border area */
+    height: calc(100% + 2px); /* Extend the height to cover the border area */
+    border: 1px solid rgba(50, 14, 44, 0.8); /* Solid border color */
+    border-radius: 10px;
+    pointer-events: none;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 0.3s ease-in-out; /* Add transition effect to opacity */
+    z-index: -1;
+}
+
+.highlight:hover::before {
+    opacity: 1; /* Make the border visible on hover */
+}
+
+.highlight:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.highlight img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.highlights::-webkit-scrollbar {
+    display: none;
+}
