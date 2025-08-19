@@ -11,14 +11,14 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import KaggleIcon from '../components/Icon/KaggleIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/gargatua-back.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/dp-white-back.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -230,6 +230,18 @@ export const education: TimelineItem[] = [
       </p>
     ),
   },
+  {
+    date: '2019 - 2021',
+    location: 'Late PB Jog Junior College, Pune',
+    title: 'Intermediate (Class XII)',
+    content: <p>Secured a final percentage of 94.33%.</p>,
+  },
+  {
+    date: '2019',
+    location: 'DAV Public School, Pune',
+    title: 'Matriculate (Class X)',
+    content: <p>Secured a final percentage of 96.20%.</p>,
+  },
 ];
 
 export const experience: TimelineItem[] = [
@@ -323,7 +335,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Enforcer03'}, // Please update
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ved-umrajkar/'}, // Please update
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Enforcer03'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ved-umrajkar/'},
   {label: 'Kaggle', Icon: KaggleIcon, href: 'https://www.kaggle.com/vedumrajkar'},
 ];
