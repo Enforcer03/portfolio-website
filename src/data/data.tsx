@@ -8,18 +8,6 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
-import {
-  About,
-  ContactSection,
-  ContactType,
-  Hero,
-  HomepageMeta,
-  PortfolioItem,
-  SkillGroup,
-  Social,
-  TestimonialSection,
-  TimelineItem,
-} from './dataDef';
 import GithubIcon from '../components/Icon/GithubIcon';
 import KaggleIcon from '../components/Icon/KaggleIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
@@ -32,13 +20,25 @@ import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
+import {
+  About,
+  ContactSection,
+  ContactType,
+  Hero,
+  HomepageMeta,
+  PortfolioItem,
+  SkillGroup,
+  Social,
+  TestimonialSection,
+  TimelineItem,
+} from './dataDef';
 
 /**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Ved Umrajkar | Resume',
-  description: "Resume of Ved Umrajkar, a student of Mathematics and Computing at IIT Roorkee.",
+  description: 'Resume of Ved Umrajkar, a student of Mathematics and Computing at IIT Roorkee.',
 };
 
 /**
@@ -66,10 +66,13 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I am a final year BS-MS student in <strong className="text-stone-100">Mathematics and Computing</strong> at the Indian Institute of Technology, Roorkee.
+        I am a final year BS-MS student in <strong className="text-stone-100">Mathematics and Computing</strong> at the
+        Indian Institute of Technology, Roorkee.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        My primary areas of interest are <strong className="text-stone-100">Machine Learning, Computer Vision, and Multimodal Learning</strong>. I have hands-on experience in building and deploying ML models through various internships and projects.
+        My primary areas of interest are{' '}
+        <strong className="text-stone-100">Machine Learning, Computer Vision, and Multimodal Learning</strong>. I have
+        hands-on experience in building and deploying ML models through various internships and projects.
       </p>
     </>
   ),
@@ -171,25 +174,29 @@ export const skills: SkillGroup[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Tree Ring Watermark Detection in Rectified Flow Models',
-    description: 'Conducted analysis of Tree Ring Watermarking performance across DDIM and rectified flow architectures. Presented at ICLR, Singapore.',
+    description:
+      'Conducted analysis of Tree Ring Watermarking performance across DDIM and rectified flow architectures. Presented at ICLR, Singapore.',
     url: '#', // Add a link to your project or publication if available
     image: porfolioImage1,
   },
   {
     title: 'Multi-Modal Person Re-Identification with Video-Text Retrieval',
-    description: 'Developing a novel video-text person re-identification system combining visual embeddings with natural language queries.',
+    description:
+      'Developing a novel video-text person re-identification system combining visual embeddings with natural language queries.',
     url: '#',
     image: porfolioImage2,
   },
   {
     title: 'Voice Cloning with AutoRegressive Acoustic Models',
-    description: 'Developed automated voice clones using Tortoise-TTS and built a Streamlit application for real-time generation.',
+    description:
+      'Developed automated voice clones using Tortoise-TTS and built a Streamlit application for real-time generation.',
     url: '#',
     image: porfolioImage3,
   },
   {
     title: 'Performance Analysis of VGG19 and ResNet50 Architectures',
-    description: 'Employed Transfer Learning to classify celebrity faces, concluding that VGG19 outperformed ResNet50 by 11% in accuracy.',
+    description:
+      'Employed Transfer Learning to classify celebrity faces, concluding that VGG19 outperformed ResNet50 by 11% in accuracy.',
     url: '#',
     image: porfolioImage4,
   },
@@ -201,7 +208,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     title: 'GANs vs Mixture Models for Image Generation',
-    description: 'Developed DCGAN and WGAN models and compared their outputs with Gaussian Mixture Models for image generation.',
+    description:
+      'Developed DCGAN and WGAN models and compared their outputs with Gaussian Mixture Models for image generation.',
     url: '#',
     image: porfolioImage6,
   },
@@ -215,20 +223,21 @@ export const education: TimelineItem[] = [
     date: '2021 - 2025',
     location: 'Indian Institute of Technology, Roorkee',
     title: 'BS-MS in Mathematics and Computing',
-    content: <p>Achieved a CGPA of 8.605. Relevant coursework includes Statistical Machine Learning, Natural Language Processing, and Design and Analysis of Algorithms.</p>,
-  }
+    content: (
+      <p>
+        Achieved a CGPA of 8.605. Relevant coursework includes Statistical Machine Learning, Natural Language
+        Processing, and Design and Analysis of Algorithms.
+      </p>
+    ),
+  },
 ];
 
 export const experience: TimelineItem[] = [
-    {
+  {
     date: 'May 2025 - July 2025 (Upcoming)',
     location: 'JPMorgan Chase',
     title: 'Intern',
-    content: (
-      <p>
-        Will be working on building macroeconomic models and automating forecasting models.
-      </p>
-    ),
+    content: <p>Will be working on building macroeconomic models and automating forecasting models.</p>,
   },
   {
     date: 'August 2023 - February 2024',
@@ -236,8 +245,12 @@ export const experience: TimelineItem[] = [
     title: 'Intern',
     content: (
       <ul>
-        <li className="list-disc ml-4">Developed a Real-Time Risk Management Framework using Starknet, PostgreSQL, and Streamlit.</li>
-        <li className="list-disc ml-4">Integrated a Mean-Variance Portfolio Optimization model, improving outlier detection by 15%.</li>
+        <li className="list-disc ml-4">
+          Developed a Real-Time Risk Management Framework using Starknet, PostgreSQL, and Streamlit.
+        </li>
+        <li className="list-disc ml-4">
+          Integrated a Mean-Variance Portfolio Optimization model, improving outlier detection by 15%.
+        </li>
         <li className="list-disc ml-4">Designed and implemented a comprehensive alert system and growth dashboard.</li>
       </ul>
     ),
@@ -248,9 +261,13 @@ export const experience: TimelineItem[] = [
     title: 'Data Science Intern',
     content: (
       <ul>
-        <li className="list-disc ml-4">Developed a Transfer Learning VGG-19 model in PyTorch to detect cracks in buildings with 99.43% accuracy.</li>
+        <li className="list-disc ml-4">
+          Developed a Transfer Learning VGG-19 model in PyTorch to detect cracks in buildings with 99.43% accuracy.
+        </li>
         <li className="list-disc ml-4">Used SARIMAX to detect sensor anomalies with 96.7% accuracy.</li>
-        <li className="list-disc ml-4">Designed a weekly forecasting model using LSTMs for electromagnetic sensor data.</li>
+        <li className="list-disc ml-4">
+          Designed a weekly forecasting model using LSTMs for electromagnetic sensor data.
+        </li>
       </ul>
     ),
   },
