@@ -229,19 +229,7 @@ export const education: TimelineItem[] = [
         Processing, and Design and Analysis of Algorithms.
       </p>
     ),
-  },
-  {
-    date: '2019 - 2021',
-    location: 'Late PB Jog Junior College, Pune',
-    title: 'Intermediate (Class XII)',
-    content: <p>Secured a final percentage of 94.33%.</p>,
-  },
-  {
-    date: '2019',
-    location: 'DAV Public School, Pune',
-    title: 'Matriculate (Class X)',
-    content: <p>Secured a final percentage of 96.20%.</p>,
-  },
+  }
 ];
 
 export const experience: TimelineItem[] = [
@@ -326,7 +314,7 @@ export const contact: ContactSection = {
     {
       type: ContactType.Github,
       text: 'ved-umrajkar', // Please update with your actual GitHub username
-      href: 'https://github.com/ved-umrajkar', // Please update with your actual GitHub link
+      href: 'https://github.com/Enforcer03', // Please update with your actual GitHub link
     },
   ],
 };
