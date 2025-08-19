@@ -9,23 +9,16 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
+import KaggleIcon from '../components/Icon/KaggleIcon'; // Assuming you have a KaggleIcon component
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/gargatua-back.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+import profilepic from '../images/dp-white-back.jpg'; // You should replace this with your own profile picture
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -44,8 +37,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Ved Umrajkar | Resume',
+  description: "Resume of Ved Umrajkar, a student of Mathematics and Computing at IIT Roorkee.",
 };
 
 /**
@@ -69,24 +62,20 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Ved Umrajkar.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I am a final year BS-MS student in <strong className="text-stone-100">Mathematics and Computing</strong> at the Indian Institute of Technology, Roorkee.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        My primary areas of interest are <strong className="text-stone-100">Machine Learning, Computer Vision, and Multimodal Learning</strong>. I have hands-on experience in building and deploying ML models through various internships and projects.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: '/assets/resume.pdf', // Make sure to place your resume PDF in the public/assets folder
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
@@ -104,16 +93,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `A highly motivated and detail-oriented student with a strong foundation in mathematics and computer science. Passionate about leveraging data to solve complex problems and build intelligent systems. Eager to contribute to a challenging and innovative work environment.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Roorkee, Uttarakhand', Icon: MapIcon},
+    {label: 'Age', text: '22', Icon: CalendarIcon}, // Please update with your correct age
+    {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Machine Learning, Computer Vision', Icon: SparklesIcon},
+    {label: 'Study', text: 'Indian Institute of Technology, Roorkee', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'JPMorgan Chase (Upcoming)', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -122,70 +109,57 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Programming Languages',
     skills: [
       {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
+        name: 'Python',
         level: 9,
       },
       {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
+        name: 'C++',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
+        name: 'SQL',
+        level: 7,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'ML & Data Science Frameworks',
     skills: [
       {
-        name: 'React Native',
+        name: 'PyTorch',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'TensorFlow',
+        level: 8,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Scikit-learn',
+        level: 9,
+      },
+      {
+        name: 'Pandas & Numpy',
+        level: 10,
+      },
+    ],
+  },
+  {
+    name: 'Web & Other Technologies',
+    skills: [
+      {
+        name: 'Streamlit',
+        level: 8,
+      },
+      {
+        name: 'NLTK',
+        level: 7,
+      },
+      {
+        name: 'Starknet-py',
+        level: 6,
       },
     ],
   },
@@ -196,118 +170,95 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Tree Ring Watermark Detection in Rectified Flow Models',
+    description: 'Conducted analysis of Tree Ring Watermarking performance across DDIM and rectified flow architectures. Presented at ICLR, Singapore.',
+    url: '#', // Add a link to your project or publication if available
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Multi-Modal Person Re-Identification with Video-Text Retrieval',
+    description: 'Developing a novel video-text person re-identification system combining visual embeddings with natural language queries.',
+    url: '#',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Voice Cloning with AutoRegressive Acoustic Models',
+    description: 'Developed automated voice clones using Tortoise-TTS and built a Streamlit application for real-time generation.',
+    url: '#',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Performance Analysis of VGG19 and ResNet50 Architectures',
+    description: 'Employed Transfer Learning to classify celebrity faces, concluding that VGG19 outperformed ResNet50 by 11% in accuracy.',
+    url: '#',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'ForecastPro',
+    description: 'Implemented a robust forecasting package by compiling multiple statistical and Deep Learning models.',
+    url: '#',
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'GANs vs Mixture Models for Image Generation',
+    description: 'Developed DCGAN and WGAN models and compared their outputs with Gaussian Mixture Models for image generation.',
+    url: '#',
     image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
   },
 ];
 
 /**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
+ * Resume section
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
+    date: '2021 - 2025',
+    location: 'Indian Institute of Technology, Roorkee',
+    title: 'BS-MS in Mathematics and Computing',
+    content: <p>Achieved a CGPA of 8.605. Relevant coursework includes Statistical Machine Learning, Natural Language Processing, and Design and Analysis of Algorithms.</p>,
+  }
 ];
 
 export const experience: TimelineItem[] = [
-  {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    {
+    date: 'May 2025 - July 2025 (Upcoming)',
+    location: 'JPMorgan Chase',
+    title: 'Intern',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Will be working on building macroeconomic models and automating forecasting models.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'August 2023 - February 2024',
+    location: 'Hashstack Finance',
+    title: 'Intern',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <ul>
+        <li className="list-disc ml-4">Developed a Real-Time Risk Management Framework using Starknet, PostgreSQL, and Streamlit.</li>
+        <li className="list-disc ml-4">Integrated a Mean-Variance Portfolio Optimization model, improving outlier detection by 15%.</li>
+        <li className="list-disc ml-4">Designed and implemented a comprehensive alert system and growth dashboard.</li>
+      </ul>
+    ),
+  },
+  {
+    date: 'January 2023 - March 2023',
+    location: 'Hloov',
+    title: 'Data Science Intern',
+    content: (
+      <ul>
+        <li className="list-disc ml-4">Developed a Transfer Learning VGG-19 model in PyTorch to detect cracks in buildings with 99.43% accuracy.</li>
+        <li className="list-disc ml-4">Used SARIMAX to detect sensor anomalies with 96.7% accuracy.</li>
+        <li className="list-disc ml-4">Designed a weekly forecasting model using LSTMs for electromagnetic sensor data.</li>
+      </ul>
     ),
   },
 ];
 
 /**
  * Testimonial section
+ * This section is a placeholder. Replace with your own testimonials.
  */
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
@@ -322,11 +273,6 @@ export const testimonial: TestimonialSection = {
       text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
   ],
 };
 
@@ -336,27 +282,22 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Feel free to reach out to me for any opportunities or collaborations.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'v_umrajkar@ma.iitr.ac.in',
+      href: 'mailto:v_umrajkar@ma.iitr.ac.in',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: 'Roorkee, Uttarakhand, India',
+      href: 'https://www.google.com/maps/place/Roorkee,+Uttarakhand',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'ved-umrajkar', // Please update with your actual GitHub username
+      href: 'https://github.com/ved-umrajkar', // Please update with your actual GitHub link
     },
   ],
 };
@@ -365,9 +306,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Enforcer03'}, // Please update
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ved-umrajkar/'}, // Please update
+  {label: 'Kaggle', Icon: KaggleIcon, href: 'https://www.kaggle.com/vedumrajkar'},
 ];
