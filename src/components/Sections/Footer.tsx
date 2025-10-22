@@ -7,28 +7,31 @@ import Socials from '../Socials';
 const currentYear = new Date().getFullYear();
 
 const Footer: FC = memo(() => (
-  <div className="relative bg-neutral-900 px-4 pb-6 pt-12 sm:px-8 sm:pb-8 sm:pt-14">
-    <div className="absolute inset-x-0 -top-4 flex justify-center sm:-top-6">
+  <div className="relative mt-20 overflow-hidden rounded-t-3xl border-t border-white/10 bg-white/5 px-4 pb-10 pt-16 text-neutral-100 shadow-2xl shadow-black/40 backdrop-blur-xl sm:px-10 sm:pb-14">
+    <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-white/10" />
+    <div className="absolute inset-x-0 -top-6 flex justify-center sm:-top-8">
       <a
-        className="rounded-full bg-neutral-100 p-1 ring-white ring-offset-2 ring-offset-gray-700/80 focus:outline-none focus:ring-2 sm:p-2"
+        className="flex items-center justify-center rounded-full border border-white/40 bg-white/80 p-2 text-neutral-900 shadow-lg shadow-black/20 transition-transform duration-200 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-orange-400/60 focus:ring-offset-2 focus:ring-offset-neutral-900 sm:p-3"
         href={`/#${SectionId.Hero}`}>
-        <ChevronUpIcon className="h-6 w-6 bg-transparent sm:h-8 sm:w-8" />
+        <ChevronUpIcon className="h-5 w-5 sm:h-6 sm:w-6" />
       </a>
     </div>
-    <div className="flex flex-col items-center gap-y-6">
-      <div className="flex gap-x-4 text-neutral-500">
+    <div className="relative flex flex-col items-center gap-6">
+      <div className="flex flex-wrap justify-center gap-4 text-neutral-200">
         <Socials />
       </div>
       <a
-        className="-m-2 flex items-center gap-x-1 rounded-md p-2 ring-yellow focus:outline-none focus:ring-2"
+        className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-neutral-100 transition-colors duration-200 hover:border-orange-400/40 hover:bg-orange-400/10 focus:outline-none focus:ring-2 focus:ring-orange-400/60 focus:ring-offset-2 focus:ring-offset-neutral-900"
         href="https://reactresume.com">
-        <BoltIcon className="h-5 w-5 text-yellow" />
-        <span>
-          Provided by <span className="text-white">React</span>
-          <span className="italic text-yellow">Resume</span>
+        <BoltIcon className="h-5 w-5 text-orange-300" />
+        <span className="sm:text-base">
+          Powered by <span className="text-white">React</span>
+          <span className="italic text-orange-300">Resume</span>
         </span>
       </a>
-      <span className="text-sm text-neutral-700">© Copyright {currentYear} Tim Baker</span>
+      <p className="text-center text-xs uppercase tracking-[0.4em] text-neutral-300">
+        © {currentYear} Tim Baker — Crafted with care
+      </p>
     </div>
   </div>
 ));

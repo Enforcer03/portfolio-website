@@ -1,8 +1,4 @@
-import {
-  ArrowTopRightOnSquareIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from '@heroicons/react/24/outline';
+import {ArrowTopRightOnSquareIcon, ChevronLeftIcon, ChevronRightIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
 import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
@@ -21,9 +17,7 @@ const Portfolio: FC = memo(() => {
   }, []);
 
   const prevSlide = () => {
-    setCurrentIndex(
-      prevIndex => (prevIndex - 1 + portfolioItems.length) % portfolioItems.length,
-    );
+    setCurrentIndex(prevIndex => (prevIndex - 1 + portfolioItems.length) % portfolioItems.length);
   };
 
   // Auto-scroll functionality
@@ -56,7 +50,7 @@ const Portfolio: FC = memo(() => {
               };
             }
             // Item to the right
-            else if (offset === 1 || offset === - (portfolioItems.length - 1)) {
+            else if (offset === 1 || offset === -(portfolioItems.length - 1)) {
               positionStyle = {
                 transform: 'translateX(50%) scale(0.8)',
                 opacity: 0.5,

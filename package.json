@@ -1,6 +1,6 @@
 {
-  "name": "react-resume-template",
-  "version": "2.0.0",
+  "name": "my-website",
+  "version": "y",
   "private": true,
   "scripts": {
     "build": "yarn compile && yarn next build",
@@ -8,7 +8,7 @@
     "compile": "yarn run -T tsc --build --verbose",
     "dev": "yarn compile && yarn next dev",
     "lint": "yarn run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
-    "start": "yarn next start",
+    "start": "yarn build && yarn next start",
     "sitemap": "yarn next-sitemap"
   },
   "dependencies": {
@@ -60,5 +60,10 @@
   },
   "resolutions": {
     "autoprefixer": "10.4.5"
-  }
+  },
+  "description": "portfolio website for Ved Umrajkar",
+  "main": "index.js",
+  "repository": "https://github.com/Enforcer03/react-resume-template",
+  "author": "Enforcer03 <vedumrajkar2003@gmail.com>",
+  "license": "MIT"
 }

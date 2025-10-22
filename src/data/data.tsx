@@ -2,15 +2,14 @@ import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
   BuildingOffice2Icon,
-  CalendarIcon,
   FlagIcon,
   MapIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import KaggleIcon from '../components/Icon/KaggleIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
+import TwitterIcon from '../components/Icon/TwitterIcon';
 import profilepic from '../images/dp-white-back.jpg';
 import heroImage from '../images/gargatua-back.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
@@ -50,6 +49,7 @@ export const SectionId = {
   Contact: 'contact',
   Portfolio: 'portfolio',
   Resume: 'resume',
+  Publications: 'publications',
   Skills: 'skills',
   Stats: 'stats',
   Testimonials: 'testimonials',
@@ -71,8 +71,10 @@ export const heroData: Hero = {
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         My primary areas of interest are{' '}
-        <strong className="text-stone-100">Machine Learning, Computer Vision, and Multimodal Learning</strong>. I have
-        hands-on experience in building and deploying ML models through various internships and projects.
+        <strong className="text-stone-100">
+          Machine Learning, Computer Vision, Applied Statistics, and Multimodal AI
+        </strong>
+        . I have hands-on experience in building and deploying ML models through various internships and projects.
       </p>
     </>
   ),
@@ -99,11 +101,10 @@ export const aboutData: About = {
   description: `A highly motivated and detail-oriented student with a strong foundation in mathematics and computer science. Passionate about leveraging data to solve complex problems and build intelligent systems. Eager to contribute to a challenging and innovative work environment.`,
   aboutItems: [
     {label: 'Location', text: 'Roorkee, Uttarakhand', Icon: MapIcon},
-    {label: 'Age', text: '22', Icon: CalendarIcon}, // Please update with your correct age
     {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
     {label: 'Interests', text: 'Machine Learning, Computer Vision', Icon: SparklesIcon},
     {label: 'Study', text: 'Indian Institute of Technology, Roorkee', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'JPMorgan Chase (Upcoming)', Icon: BuildingOffice2Icon},
+    {label: 'Employment', text: 'JPMorgan Chase', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -175,21 +176,21 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Tree Ring Watermark Detection in Rectified Flow Models',
     description:
-      'Conducted analysis of Tree Ring Watermarking performance across DDIM and rectified flow architectures. Presented at ICLR, Singapore.',
-    url: '#', // Add a link to your project or publication if available
+      'Conducted analysis of Tree Ring Watermarking performance across DDIM and rectified flow architectures. Presented findings at ICLR, Singapore.',
+    url: '#',
     image: porfolioImage1,
   },
   {
     title: 'Multi-Modal Person Re-Identification with Video-Text Retrieval',
     description:
-      'Developing a novel video-text person re-identification system combining visual embeddings with natural language queries.',
+      'Developing a novel video-text person re-identification system combining visual embeddings with natural language queries for enhanced retrieval performance.',
     url: '#',
     image: porfolioImage2,
   },
   {
     title: 'Voice Cloning with AutoRegressive Acoustic Models',
     description:
-      'Developed automated voice clones using Tortoise-TTS and built a Streamlit application for real-time generation.',
+      'Developed automated voice clones using Tortoise-TTS and built a Streamlit application for real-time generation from textual inputs.',
     url: '#',
     image: porfolioImage3,
   },
@@ -202,14 +203,15 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     title: 'ForecastPro',
-    description: 'Implemented a robust forecasting package by compiling multiple statistical and Deep Learning models.',
+    description:
+      'Implemented a robust forecasting package by compiling multiple statistical (ARIMA, SARIMAX) and Deep Learning models (RNNs, LSTMs).',
     url: '#',
     image: porfolioImage5,
   },
   {
     title: 'GANs vs Mixture Models for Image Generation',
     description:
-      'Developed DCGAN and WGAN models and compared their outputs with Gaussian Mixture Models for image generation.',
+      'Developed DCGAN and WGAN models and compared their outputs with Gaussian Mixture Models, finding GMM images more diverse but less sharp.',
     url: '#',
     image: porfolioImage6,
   },
@@ -220,24 +222,29 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: '2021 - 2025',
+    date: '2021 - 2026',
     location: 'Indian Institute of Technology, Roorkee',
     title: 'BS-MS in Mathematics and Computing',
-    content: (
-      <p>
-        Achieved a CGPA of 8.605. Relevant coursework includes Statistical Machine Learning, Natural Language
-        Processing, and Design and Analysis of Algorithms.
-      </p>
-    ),
-  }
+    content: <p>Current CGPA of 8.605. Relevant courses include Financial Risk Management and Machine Learning.</p>,
+  },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'May 2025 - July 2025 (Upcoming)',
+    date: 'May 2025 - July 2025',
     location: 'JPMorgan Chase',
     title: 'Intern',
-    content: <p>Will be working on building macroeconomic models and automating forecasting models.</p>,
+    content: (
+      <ul>
+        <li className="list-disc ml-4">
+          Successfully implemented and deployed an investment management fees macroeconomic model into production.
+        </li>
+        <li className="list-disc ml-4">
+          Developed a highly granular prototype for an existing headcount forecasting tool to account for COVID
+          disparities.
+        </li>
+      </ul>
+    ),
   },
   {
     date: 'August 2023 - February 2024',
@@ -249,7 +256,7 @@ export const experience: TimelineItem[] = [
           Developed a Real-Time Risk Management Framework using Starknet, PostgreSQL, and Streamlit.
         </li>
         <li className="list-disc ml-4">
-          Integrated a Mean-Variance Portfolio Optimization model, improving outlier detection by 15%.
+          Integrated a Mean-Variance Portfolio Optimization model, improving outlier detection accuracy by 15%.
         </li>
         <li className="list-disc ml-4">Designed and implemented a comprehensive alert system and growth dashboard.</li>
       </ul>
@@ -274,8 +281,32 @@ export const experience: TimelineItem[] = [
 ];
 
 /**
+ * Research Publications section
+ */
+export const publications: TimelineItem[] = [
+  {
+    date: '2025',
+    location: 'ICLR, Singapore',
+    title:
+      'Detection Limits and Statistical Separability of Tree Ring Watermarks in Rectified Flow-based Text-to-Image Generation Models',
+    content: (
+      <p>
+        Co-authored with Aakash Kumar Singh and presented at the International Conference on Learning
+        Representations[cite: 94].
+      </p>
+    ),
+  },
+  {
+    date: '2025',
+    location: 'ICCV (Under Review)',
+    title: 'DAC-LORA: Dynamic Adversarial Curriculum for Efficient and Robust Few-Shot Adaptation',
+    content: <p>Currently under review for the International Conference on Computer Vision[cite: 94].</p>,
+  },
+];
+
+/**
  * Testimonial section
- * This section is a placeholder. Replace with your own testimonials.
+ * This section is a placeholder. Resume does not contain testimonial information.
  */
 export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
@@ -306,24 +337,13 @@ export const contact: ContactSection = {
       text: 'v_umrajkar@ma.iitr.ac.in',
       href: 'mailto:v_umrajkar@ma.iitr.ac.in',
     },
-    {
-      type: ContactType.Location,
-      text: 'Roorkee, Uttarakhand, India',
-      href: 'https://www.google.com/maps/place/Roorkee,+Uttarakhand',
-    },
-    {
-      type: ContactType.Github,
-      text: 'ved-umrajkar', // Please update with your actual GitHub username
-      href: 'https://github.com/Enforcer03', // Please update with your actual GitHub link
-    },
   ],
 };
-
 /**
  * Social items
  */
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Enforcer03'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ved-umrajkar/'},
-  {label: 'Kaggle', Icon: KaggleIcon, href: 'https://www.kaggle.com/vedumrajkar'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/ved_umrajkar'},
 ];
