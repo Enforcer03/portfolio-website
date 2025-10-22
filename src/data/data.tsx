@@ -8,6 +8,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
+import GoogleScholarIcon from '../components/Icon/GoogleScholarIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import profilepic from '../images/dp-white-back.jpg';
@@ -63,6 +64,7 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 export const heroData: Hero = {
   imageSrc: heroImage,
   name: `I'm Ved Umrajkar.`,
+  // interests: ['Machine Learning', 'Computer Vision', 'Applied Statistics', 'Multimodal AI', 'Trustworthy AI'],
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -99,6 +101,12 @@ export const heroData: Hero = {
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `A highly motivated and detail-oriented student with a strong foundation in mathematics and computer science. Passionate about leveraging data to solve complex problems and build intelligent systems. Eager to contribute to a challenging and innovative work environment.`,
+  achievements: [
+    'Amazon ML Challenge 2024 — Global Rank 16 among 10k+ teams',
+    'Inter-IIT Tech Meet 13.0 — Silver Medal for Dream11 AI Product',
+    'Kaggle Expert — Top 1% (Global Rank 1890)',
+    'INSPIRE Scholarship awardee by the Government of India',
+  ],
   aboutItems: [
     {label: 'Location', text: 'Roorkee, Uttarakhand', Icon: MapIcon},
     {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
@@ -222,10 +230,14 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: '2021 - 2026',
+    date: '2021 — 2026',
     location: 'Indian Institute of Technology, Roorkee',
-    title: 'BS-MS in Mathematics and Computing',
-    content: <p>Current CGPA of 8.605. Relevant courses include Financial Risk Management and Machine Learning.</p>,
+    title: 'BS-MS, Mathematics & Computing',
+    content: (
+      <p>
+        CGPA 8.61 • Specialized in Machine Learning, Financial Risk, Statistical Inference, and advanced optimisation.
+      </p>
+    ),
   },
 ];
 
@@ -235,15 +247,10 @@ export const experience: TimelineItem[] = [
     location: 'JPMorgan Chase',
     title: 'Intern',
     content: (
-      <ul>
-        <li className="list-disc ml-4">
-          Successfully implemented and deployed an investment management fees macroeconomic model into production.
-        </li>
-        <li className="list-disc ml-4">
-          Developed a highly granular prototype for an existing headcount forecasting tool to account for COVID
-          disparities.
-        </li>
-      </ul>
+      <p>
+        Productionised an investment-fee forecasting engine and automated COVID-aware headcount variance tracking for
+        Asset & Wealth Management.
+      </p>
     ),
   },
   {
@@ -251,15 +258,10 @@ export const experience: TimelineItem[] = [
     location: 'Hashstack Finance',
     title: 'Intern',
     content: (
-      <ul>
-        <li className="list-disc ml-4">
-          Developed a Real-Time Risk Management Framework using Starknet, PostgreSQL, and Streamlit.
-        </li>
-        <li className="list-disc ml-4">
-          Integrated a Mean-Variance Portfolio Optimization model, improving outlier detection accuracy by 15%.
-        </li>
-        <li className="list-disc ml-4">Designed and implemented a comprehensive alert system and growth dashboard.</li>
-      </ul>
+      <p>
+        Built a Starknet risk dashboard, boosted anomaly coverage by 15% with a mean-variance optimiser, and shipped
+        automated growth alerts.
+      </p>
     ),
   },
   {
@@ -267,15 +269,10 @@ export const experience: TimelineItem[] = [
     location: 'Hloov',
     title: 'Data Science Intern',
     content: (
-      <ul>
-        <li className="list-disc ml-4">
-          Developed a Transfer Learning VGG-19 model in PyTorch to detect cracks in buildings with 99.43% accuracy.
-        </li>
-        <li className="list-disc ml-4">Used SARIMAX to detect sensor anomalies with 96.7% accuracy.</li>
-        <li className="list-disc ml-4">
-          Designed a weekly forecasting model using LSTMs for electromagnetic sensor data.
-        </li>
-      </ul>
+      <p>
+        Delivered a 99.43% accurate VGG-19 crack detector, 96.7%-precision SARIMAX anomaly watch, and LSTM maintenance
+        forecasts.
+      </p>
     ),
   },
 ];
@@ -345,5 +342,10 @@ export const contact: ContactSection = {
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Enforcer03'},
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/ved-umrajkar/'},
+  {
+    label: 'Google Scholar',
+    Icon: GoogleScholarIcon,
+    href: 'https://scholar.google.com/citations?user=MgMpgRgAAAAJ&hl=en',
+  },
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/ved_umrajkar'},
 ];

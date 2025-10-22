@@ -37,9 +37,7 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, 
           <div className="absolute bottom-[-10%] left-[-10%] h-64 w-64 rounded-full bg-purple-500/30 blur-3xl sm:h-80 sm:w-80" />
           <div className="absolute right-[-5%] top-1/3 h-60 w-60 rounded-full bg-teal-400/30 blur-3xl sm:h-72 sm:w-72" />
         </div>
-        <main className="relative flex flex-1 flex-col">
-          {children}
-        </main>
+        <main className="relative flex flex-1 flex-col">{children}</main>
       </div>
     </>
   );

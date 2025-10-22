@@ -7,10 +7,8 @@ import {heroData, SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 import Socials from '../Socials';
 
-const highlightPills = ['Machine Learning', 'Computer Vision', 'Applied Statistics', 'Multimodal AI'];
-
 const Hero: FC = memo(() => {
-  const {imageSrc, name, description, actions} = heroData;
+  const {imageSrc, name, description, actions, interests} = heroData;
 
   return (
     <Section noPadding sectionId={SectionId.Hero}>
@@ -31,16 +29,23 @@ const Hero: FC = memo(() => {
               className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-500/50 via-purple-500/30 to-teal-400/40 opacity-90 blur-3xl"
             />
             <div className="relative flex w-full flex-col items-center gap-y-6 rounded-3xl border border-white/10 bg-neutral-900/70 p-6 text-center shadow-2xl shadow-purple-950/30 backdrop-blur-xl sm:p-12">
-              <div className="flex flex-wrap justify-center gap-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-orange-300 sm:text-xs">
-                {highlightPills.map(pill => (
-                  <span
-                    className="rounded-full border border-orange-300/40 bg-white/5 px-3 py-1 text-orange-200/90 backdrop-blur sm:px-4"
-                    key={pill}>
-                    {pill}
-                  </span>
-                ))}
-              </div>
               <h1 className="text-balance text-4xl font-bold text-white sm:text-5xl lg:text-6xl">{name}</h1>
+              {interests?.length ? (
+                <>
+                  <div className="flex flex-wrap justify-center gap-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-orange-300 sm:text-xs">
+                    {interests.map(pill => (
+                      <span
+                        className="rounded-full border border-orange-300/40 bg-white/5 px-3 py-1 text-orange-200/90 backdrop-blur sm:px-4"
+                        key={pill}>
+                        {pill}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-200/80 sm:text-sm">
+                    {interests.join(' • ')}
+                  </p>
+                </>
+              ) : null}
               <div className="flex flex-col gap-y-3 text-neutral-200 sm:gap-y-4">{description}</div>
               <div className="flex flex-wrap justify-center gap-3 text-neutral-100 sm:gap-4">
                 <Socials />

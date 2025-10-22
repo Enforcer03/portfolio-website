@@ -28,8 +28,14 @@ const Contact: FC = memo(() => {
   return (
     <Section className="bg-transparent" sectionId={SectionId.Contact}>
       <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-black/40 backdrop-blur-xl sm:p-12">
-        <div aria-hidden className="pointer-events-none absolute -top-16 right-[-10%] h-60 w-60 rounded-full bg-orange-400/30 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute bottom-[-20%] left-[-10%] h-60 w-60 rounded-full bg-teal-400/30 blur-3xl" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-16 right-[-10%] h-60 w-60 rounded-full bg-orange-400/30 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute bottom-[-20%] left-[-10%] h-60 w-60 rounded-full bg-teal-400/30 blur-3xl"
+        />
         <div className="relative flex flex-col gap-10">
           <div className="flex flex-col items-center gap-6 text-center md:flex-row md:items-center md:justify-between md:text-left">
             <div className="flex items-center gap-4 md:gap-6">

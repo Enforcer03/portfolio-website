@@ -8,7 +8,10 @@ const currentYear = new Date().getFullYear();
 
 const Footer: FC = memo(() => (
   <div className="relative mt-20 overflow-hidden rounded-t-3xl border-t border-white/10 bg-white/5 px-4 pb-10 pt-16 text-neutral-100 shadow-2xl shadow-black/40 backdrop-blur-xl sm:px-10 sm:pb-14">
-    <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-white/10" />
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-white/5 to-white/10"
+    />
     <div className="absolute inset-x-0 -top-6 flex justify-center sm:-top-8">
       <a
         className="flex items-center justify-center rounded-full border border-white/40 bg-white/80 p-2 text-neutral-900 shadow-lg shadow-black/20 transition-transform duration-200 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-orange-400/60 focus:ring-offset-2 focus:ring-offset-neutral-900 sm:p-3"

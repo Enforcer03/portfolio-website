@@ -23,6 +23,7 @@ export interface HomepageMeta {
 export interface Hero {
   imageSrc: string;
   name: string;
+  interests?: string[];
   description: JSX.Element;
   actions: HeroActionItem[];
 }
@@ -40,6 +41,7 @@ interface HeroActionItem {
 export interface About {
   profileImageSrc?: string;
   description: string;
+  achievements?: string[];
   aboutItems: AboutItem[];
 }
 

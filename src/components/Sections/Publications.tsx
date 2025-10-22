@@ -7,8 +7,14 @@ const Publications: FC = memo(() => {
   return (
     <Section className="bg-transparent" sectionId={SectionId.Publications}>
       <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-12">
-        <div aria-hidden className="pointer-events-none absolute -top-24 right-[-10%] h-64 w-64 rounded-full bg-purple-400/30 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute bottom-[-20%] left-[-10%] h-72 w-72 rounded-full bg-orange-400/30 blur-3xl" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-24 right-[-10%] h-64 w-64 rounded-full bg-purple-400/30 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute bottom-[-20%] left-[-10%] h-72 w-72 rounded-full bg-orange-400/30 blur-3xl"
+        />
         <div className="relative flex flex-col gap-8">
           <div className="flex flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left">
             <div className="flex flex-col items-center gap-3 md:items-start">
@@ -17,7 +23,8 @@ const Publications: FC = memo(() => {
               <span className="mt-2 h-1 w-16 rounded-full bg-gradient-to-r from-orange-400 via-pink-400 to-purple-500" />
             </div>
             <p className="mt-4 max-w-xl text-sm text-neutral-200 sm:mt-0 sm:text-base">
-              Selected work from conferences and in-progress research focused on robust, efficient machine learning systems.
+              Selected work from conferences and in-progress research focused on robust, efficient machine learning
+              systems.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
