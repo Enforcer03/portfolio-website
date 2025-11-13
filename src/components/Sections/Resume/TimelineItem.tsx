@@ -12,7 +12,9 @@ const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="flex flex-col gap-1">
               <h3 className="text-lg font-semibold text-neutral-900 dark:text-white sm:text-xl">{title}</h3>
-              <span className="text-sm font-medium text-neutral-500 dark:text-neutral-300 sm:text-base">{location}</span>
+              <span className="text-sm font-medium text-neutral-500 dark:text-neutral-300 sm:text-base">
+                {location}
+              </span>
             </div>
             <span className="inline-flex items-center gap-2 rounded-full border border-orange-400/40 bg-orange-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-orange-600 dark:bg-orange-400/10 dark:text-orange-200">
               {date}

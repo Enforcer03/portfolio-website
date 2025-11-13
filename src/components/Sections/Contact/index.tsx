@@ -77,7 +77,10 @@ const Contact: FC = memo(() => {
                           rel={href ? 'noreferrer' : undefined}
                           target={href ? '_blank' : undefined}>
                           <div className="flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200/80 bg-white/80 transition-colors duration-200 group-hover:border-orange-300/60 group-hover:bg-orange-100 dark:border-white/10 dark:bg-white/10">
-                            <Icon aria-hidden="true" className="h-5 w-5 flex-shrink-0 text-orange-500 dark:text-orange-300 sm:h-6 sm:w-6" />
+                            <Icon
+                              aria-hidden="true"
+                              className="h-5 w-5 flex-shrink-0 text-orange-500 dark:text-orange-300 sm:h-6 sm:w-6"
+                            />
                           </div>
                           <span className="text-sm sm:text-base">{text}</span>
                         </a>

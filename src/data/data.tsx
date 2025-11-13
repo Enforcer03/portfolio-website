@@ -24,11 +24,11 @@ import {
   ContactSection,
   ContactType,
   Hero,
+  HighlightItem,
   HomepageMeta,
   PortfolioItem,
   SkillGroup,
   Social,
-  HighlightItem,
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
@@ -70,8 +70,8 @@ export const heroData: Hero = {
     <>
       <p className="prose-sm text-neutral-700 dark:text-stone-200 sm:prose-base lg:prose-lg">
         I am a final year BS-MS student in{' '}
-        <strong className="text-neutral-900 dark:text-stone-100">Mathematics and Computing</strong> at the
-        Indian Institute of Technology, Roorkee.
+        <strong className="text-neutral-900 dark:text-stone-100">Mathematics and Computing</strong> at the Indian
+        Institute of Technology, Roorkee.
       </p>
       <p className="prose-sm text-neutral-700 dark:text-stone-200 sm:prose-base lg:prose-lg">
         My primary areas of interest are{' '}

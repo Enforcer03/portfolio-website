@@ -30,7 +30,10 @@ export const parseFrontMatter = (raw: string): FrontMatterResult => {
     }
 
     const key = trimmed.slice(0, separatorIndex).trim();
-    const value = trimmed.slice(separatorIndex + 1).trim().replace(/^"(.*)"$/, '$1');
+    const value = trimmed
+      .slice(separatorIndex + 1)
+      .trim()
+      .replace(/^"(.*)"$/, '$1');
     data[key] = value;
   });
 

@@ -15,9 +15,7 @@ const PageIntro: FC<
             {eyebrow}
           </span>
           <h1 className="text-balance text-4xl font-semibold text-neutral-900 dark:text-white sm:text-5xl">{title}</h1>
-          {description ? (
-            <p className="text-lg text-neutral-600 dark:text-neutral-200">{description}</p>
-          ) : null}
+          {description ? <p className="text-lg text-neutral-600 dark:text-neutral-200">{description}</p> : null}
           {children}
         </div>
       </div>

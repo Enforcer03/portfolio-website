@@ -21,37 +21,37 @@ const Blogs: FC<{posts: BlogMeta[]}> = memo(({posts}) => {
           </p>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {posts.length
-            ? posts.map(post => (
-                <article
-                  className="flex flex-col rounded-2xl border border-neutral-200/80 bg-white/80 p-6 text-left shadow-lg shadow-black/5 transition-transform duration-200 hover:-translate-y-1 hover:border-orange-400/50 dark:border-white/10 dark:bg-neutral-800/70 dark:shadow-black/40"
-                  key={post.slug}>
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500 dark:text-orange-200">
-                    {new Date(post.date).toLocaleDateString(undefined, {month: 'short', day: 'numeric', year: 'numeric'})}
-                  </p>
-                  <h3 className="mt-3 text-xl font-semibold text-neutral-900 dark:text-white">{post.title}</h3>
-                  <p className="mt-3 flex-1 text-sm text-neutral-600 dark:text-neutral-200">{post.excerpt}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {post.tags.map(tag => (
-                      <span
-                        className="rounded-full border border-neutral-200/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-neutral-500 dark:border-white/20 dark:text-neutral-300"
-                        key={`${post.slug}-${tag}`}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <Link
-                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-orange-600 transition-colors hover:text-orange-500 dark:text-orange-200"
-                    href={`/blog/${post.slug}`}>
-                    Read article →
-                  </Link>
-                </article>
-              ))
-            : (
-                <p className="col-span-full text-center text-sm text-neutral-500 dark:text-neutral-300">
-                  No posts yet — drop a Markdown file in <code>content/blogs</code> to get started.
+          {posts.length ? (
+            posts.map(post => (
+              <article
+                className="flex flex-col rounded-2xl border border-neutral-200/80 bg-white/80 p-6 text-left shadow-lg shadow-black/5 transition-transform duration-200 hover:-translate-y-1 hover:border-orange-400/50 dark:border-white/10 dark:bg-neutral-800/70 dark:shadow-black/40"
+                key={post.slug}>
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-500 dark:text-orange-200">
+                  {new Date(post.date).toLocaleDateString(undefined, {month: 'short', day: 'numeric', year: 'numeric'})}
                 </p>
-              )}
+                <h3 className="mt-3 text-xl font-semibold text-neutral-900 dark:text-white">{post.title}</h3>
+                <p className="mt-3 flex-1 text-sm text-neutral-600 dark:text-neutral-200">{post.excerpt}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {post.tags.map(tag => (
+                    <span
+                      className="rounded-full border border-neutral-200/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-neutral-500 dark:border-white/20 dark:text-neutral-300"
+                      key={`${post.slug}-${tag}`}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-orange-600 transition-colors hover:text-orange-500 dark:text-orange-200"
+                  href={`/blog/${post.slug}`}>
+                  Read article →
+                </Link>
+              </article>
+            ))
+          ) : (
+            <p className="col-span-full text-center text-sm text-neutral-500 dark:text-neutral-300">
+              No posts yet — drop a Markdown file in <code>content/blogs</code> to get started.
+            </p>
+          )}
         </div>
         <div className="mt-10 flex justify-center">
           <Link

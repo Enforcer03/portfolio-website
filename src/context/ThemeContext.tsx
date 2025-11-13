@@ -31,7 +31,9 @@ const readStoredTheme = (): ThemeMode => {
 };
 
 const ThemeProvider = memo(({children}: PropsWithChildren) => {
-  const [theme, setThemeState] = useState<ThemeMode>(() => (typeof window === 'undefined' ? 'light' : readStoredTheme()));
+  const [theme, setThemeState] = useState<ThemeMode>(() =>
+    typeof window === 'undefined' ? 'light' : readStoredTheme(),
+  );
 
   useEffect(() => {
     setThemeState(readStoredTheme());

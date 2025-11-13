@@ -33,10 +33,7 @@ const Header: FC = memo(() => {
     section && setCurrentSection(section);
   }, []);
 
-  useNavObserver(
-    navSections.length ? navSections.map(section => `#${section}`).join(',') : '',
-    handleIntersection,
-  );
+  useNavObserver(navSections.length ? navSections.map(section => `#${section}`).join(',') : '', handleIntersection);
 
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = useCallback(() => setIsOpen(prev => !prev), []);
@@ -92,7 +89,13 @@ const Header: FC = memo(() => {
           </div>
         </div>
       </header>
-      <MobileNav currentPath={pathname} currentSection={currentSection} isOpen={isOpen} navSections={navSections} onClose={toggleOpen} />
+      <MobileNav
+        currentPath={pathname}
+        currentSection={currentSection}
+        isOpen={isOpen}
+        navSections={navSections}
+        onClose={toggleOpen}
+      />
     </>
   );
 });
@@ -133,8 +136,8 @@ const MobileNav: FC<{
               <button
                 aria-label="Close navigation"
                 className="rounded-full border border-neutral-200/80 p-2 text-neutral-600 transition hover:text-orange-500 focus:outline-none dark:border-white/10 dark:text-neutral-200"
-                type="button"
-                onClick={onClose}>
+                onClick={onClose}
+                type="button">
                 <XMarkIcon className="h-5 w-5" />
               </button>
             </div>

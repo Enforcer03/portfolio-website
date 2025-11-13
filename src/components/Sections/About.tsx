@@ -38,7 +38,9 @@ const About: FC = memo(() => {
                 <span className="text-xs font-semibold uppercase tracking-[0.35em] text-orange-400 dark:text-orange-200">
                   Biography
                 </span>
-                <h2 className="text-3xl font-semibold text-neutral-900 dark:text-white sm:text-4xl lg:text-5xl">About Me</h2>
+                <h2 className="text-3xl font-semibold text-neutral-900 dark:text-white sm:text-4xl lg:text-5xl">
+                  About Me
+                </h2>
               </div>
               <p className="text-lg leading-8 text-neutral-600 dark:text-neutral-200 sm:text-xl">{description}</p>
             </div>

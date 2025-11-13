@@ -1,6 +1,6 @@
+import {GetStaticPaths, GetStaticProps, NextPage} from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import {GetStaticPaths, GetStaticProps, NextPage} from 'next';
 import {memo} from 'react';
 
 import Page from '../../components/Layout/Page';
@@ -31,7 +31,9 @@ const BlogPostPage: NextPage<BlogPostProps> = memo(({post}) => {
             href="/blog">
             ← Back to blog
           </Link>
-          <h1 className="mt-4 text-balance text-4xl font-semibold text-neutral-900 dark:text-white sm:text-5xl">{title}</h1>
+          <h1 className="mt-4 text-balance text-4xl font-semibold text-neutral-900 dark:text-white sm:text-5xl">
+            {title}
+          </h1>
           <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-400">
             {new Date(date).toLocaleDateString(undefined, {month: 'long', day: 'numeric', year: 'numeric'})}
           </p>
