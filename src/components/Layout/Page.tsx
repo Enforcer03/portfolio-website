@@ -31,11 +31,12 @@ const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, 
         <meta content={title} name="twitter:title" />
         <meta content={description} name="twitter:description" />
       </Head>
-      <div className="relative flex min-h-screen flex-col overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 text-neutral-100">
+      <div className="relative flex min-h-screen flex-col overflow-hidden bg-[rgb(var(--background))] text-[rgb(var(--foreground))] transition-colors duration-300">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -top-32 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-orange-500/40 blur-3xl sm:h-96 sm:w-96" />
-          <div className="absolute bottom-[-10%] left-[-10%] h-64 w-64 rounded-full bg-purple-500/30 blur-3xl sm:h-80 sm:w-80" />
-          <div className="absolute right-[-5%] top-1/3 h-60 w-60 rounded-full bg-teal-400/30 blur-3xl sm:h-72 sm:w-72" />
+          <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-orange-200/30 to-transparent dark:from-orange-500/10" />
+          <div className="absolute -left-20 bottom-10 h-64 w-64 rounded-full bg-purple-200/50 blur-3xl dark:bg-purple-500/20" />
+          <div className="absolute -right-10 top-1/4 h-72 w-72 rounded-full bg-teal-200/50 blur-3xl dark:bg-teal-500/20" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.7),_transparent_55%)] opacity-40 dark:opacity-10" />
         </div>
         <main className="relative flex flex-1 flex-col">{children}</main>
       </div>

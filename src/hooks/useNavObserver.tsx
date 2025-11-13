@@ -5,6 +5,10 @@ import {SectionId} from '../data/data';
 
 export const useNavObserver = (selectors: string, handler: (section: SectionId | null) => void) => {
   useEffect(() => {
+    if (!selectors) {
+      return undefined;
+    }
+
     // Get all sections
     const headings = document.querySelectorAll(selectors);
     const headingsArray = Array.from(headings);

@@ -13,56 +13,76 @@ const Hero: FC = memo(() => {
   return (
     <Section noPadding sectionId={SectionId.Hero}>
       <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
-        <Image
-          alt={`${name}-image`}
-          className="absolute inset-0 z-0 h-full w-full object-cover"
-          placeholder="blur"
-          priority
-          sizes="100vw"
-          src={imageSrc}
-        />
-        <div aria-hidden className="absolute inset-0 z-0 bg-neutral-900/80" />
+        {imageSrc ? (
+          <>
+            <Image
+              alt={`${name}-image`}
+              className="absolute inset-0 z-0 h-full w-full object-cover"
+              placeholder="blur"
+              priority
+              sizes="100vw"
+              src={imageSrc}
+            />
+            <div aria-hidden className="absolute inset-0 z-0 bg-white/75 dark:bg-neutral-950/85" />
+          </>
+        ) : (
+          <div
+            aria-hidden
+            className="absolute inset-0 z-0 bg-gradient-to-br from-orange-100 via-white to-teal-50 dark:from-neutral-900 dark:via-neutral-950 dark:to-neutral-900"
+          />
+        )}
         <div className="relative z-10 flex w-full justify-center px-4 py-24 sm:px-6 lg:py-32">
           <div className="relative w-full max-w-4xl">
             <div
               aria-hidden
-              className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-500/50 via-purple-500/30 to-teal-400/40 opacity-90 blur-3xl"
+              className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-200/60 via-pink-200/40 to-teal-200/40 opacity-80 blur-3xl dark:from-orange-500/40 dark:via-purple-500/30 dark:to-teal-500/30"
             />
-            <div className="relative flex w-full flex-col items-center gap-y-6 rounded-3xl border border-white/10 bg-neutral-900/70 p-6 text-center shadow-2xl shadow-purple-950/30 backdrop-blur-xl sm:p-12">
-              <h1 className="text-balance text-4xl font-bold text-white sm:text-5xl lg:text-6xl">{name}</h1>
+            <div className="relative flex w-full flex-col items-center gap-y-6 rounded-3xl border border-neutral-200/70 bg-white/90 p-6 text-center shadow-2xl shadow-black/10 backdrop-blur-xl dark:border-white/10 dark:bg-neutral-900/70 dark:shadow-black/40 sm:p-12">
+              <h1 className="text-balance text-4xl font-bold text-neutral-900 animate-fade-up dark:text-white sm:text-5xl lg:text-6xl">
+                {name}
+              </h1>
               {interests?.length ? (
                 <>
-                  <div className="flex flex-wrap justify-center gap-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-orange-300 sm:text-xs">
+                  <div className="flex flex-wrap justify-center gap-2 text-[11px] font-semibold uppercase tracking-[0.32em] text-orange-400 dark:text-orange-200 sm:text-xs">
                     {interests.map(pill => (
                       <span
-                        className="rounded-full border border-orange-300/40 bg-white/5 px-3 py-1 text-orange-200/90 backdrop-blur sm:px-4"
+                        className="rounded-full border border-orange-300/60 bg-orange-50 px-3 py-1 text-orange-500 backdrop-blur dark:border-orange-300/40 dark:bg-white/5 dark:text-orange-200 sm:px-4"
                         key={pill}>
                         {pill}
                       </span>
                     ))}
                   </div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-200/80 sm:text-sm">
+                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-600/80 dark:text-cyan-200/80 sm:text-sm">
                     {interests.join(' • ')}
                   </p>
                 </>
               ) : null}
-              <div className="flex flex-col gap-y-3 text-neutral-200 sm:gap-y-4">{description}</div>
-              <div className="flex flex-wrap justify-center gap-3 text-neutral-100 sm:gap-4">
+              <div className="flex flex-col gap-y-3 text-neutral-600 animate-fade-up-delayed dark:text-neutral-200 sm:gap-y-4">
+                {description}
+              </div>
+              <div className="flex flex-wrap justify-center gap-3 text-neutral-700 dark:text-neutral-100 sm:gap-4">
                 <Socials />
               </div>
               <div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
                 {actions.map(({href, text, primary, Icon}) => (
                   <a
                     className={classNames(
-                      'flex w-full items-center justify-center gap-x-2 rounded-full border-2 px-5 py-3 text-sm font-semibold text-white ring-offset-neutral-900 transition-colors duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:w-auto sm:text-base',
+                      'flex w-full items-center justify-center gap-x-2 rounded-full border-2 px-5 py-3 text-sm font-semibold ring-offset-white transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 dark:ring-offset-neutral-900 sm:w-auto sm:text-base',
                       primary
-                        ? 'border-orange-500 bg-gradient-to-r from-orange-500/80 to-red-500/80 ring-orange-500 hover:from-orange-400/80 hover:to-red-400/80'
-                        : 'border-white/60 bg-white/10 ring-white hover:bg-white/20',
+                        ? 'border-transparent bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 text-white ring-orange-500/60 hover:shadow-orange-500/30'
+                        : 'border-neutral-800 bg-transparent text-neutral-900 ring-neutral-900 hover:bg-neutral-900 hover:text-white dark:border-white/60 dark:text-white',
                     )}
                     href={href}
                     key={text}>
                     {text}
-                    {Icon && <Icon className="h-5 w-5 text-white sm:h-6 sm:w-6" />}
+                    {Icon && (
+                      <Icon
+                        className={classNames(
+                          'h-5 w-5 sm:h-6 sm:w-6',
+                          primary ? 'text-white' : 'text-neutral-900 dark:text-white',
+                        )}
+                      />
+                    )}
                   </a>
                 ))}
               </div>
@@ -71,7 +91,7 @@ const Hero: FC = memo(() => {
         </div>
         <div className="absolute inset-x-0 bottom-8 flex justify-center sm:bottom-12">
           <a
-            className="rounded-full bg-white p-1 ring-white ring-offset-2 ring-offset-neutral-900/80 focus:outline-none focus:ring-2 sm:p-2"
+            className="rounded-full bg-white p-1 text-neutral-900 ring-neutral-900/20 ring-offset-2 ring-offset-white shadow-md focus:outline-none focus:ring-2 dark:bg-neutral-900 dark:text-white dark:ring-white/40 dark:ring-offset-neutral-900 sm:p-2"
             href={`/#${SectionId.About}`}>
             <ChevronDownIcon className="h-5 w-5 bg-transparent sm:h-6 sm:w-6" />
           </a>

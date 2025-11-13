@@ -12,7 +12,6 @@ import GoogleScholarIcon from '../components/Icon/GoogleScholarIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import profilepic from '../images/dp-white-back.jpg';
-import heroImage from '../images/gargatua-back.png';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -29,6 +28,7 @@ import {
   PortfolioItem,
   SkillGroup,
   Social,
+  HighlightItem,
   TestimonialSection,
   TimelineItem,
 } from './dataDef';
@@ -47,6 +47,8 @@ export const homePageMeta: HomepageMeta = {
 export const SectionId = {
   Hero: 'hero',
   About: 'about',
+  Highlights: 'highlights',
+  Blogs: 'blogs',
   Contact: 'contact',
   Portfolio: 'portfolio',
   Resume: 'resume',
@@ -62,18 +64,18 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  * Hero section
  */
 export const heroData: Hero = {
-  imageSrc: heroImage,
   name: `I'm Ved Umrajkar.`,
   // interests: ['Machine Learning', 'Computer Vision', 'Applied Statistics', 'Multimodal AI', 'Trustworthy AI'],
   description: (
     <>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I am a final year BS-MS student in <strong className="text-stone-100">Mathematics and Computing</strong> at the
+      <p className="prose-sm text-neutral-700 dark:text-stone-200 sm:prose-base lg:prose-lg">
+        I am a final year BS-MS student in{' '}
+        <strong className="text-neutral-900 dark:text-stone-100">Mathematics and Computing</strong> at the
         Indian Institute of Technology, Roorkee.
       </p>
-      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+      <p className="prose-sm text-neutral-700 dark:text-stone-200 sm:prose-base lg:prose-lg">
         My primary areas of interest are{' '}
-        <strong className="text-stone-100">
+        <strong className="text-neutral-900 dark:text-stone-100">
           Machine Learning, Computer Vision, Applied Statistics, and Multimodal AI
         </strong>
         . I have hands-on experience in building and deploying ML models through various internships and projects.
@@ -222,6 +224,36 @@ export const portfolioItems: PortfolioItem[] = [
       'Developed DCGAN and WGAN models and compared their outputs with Gaussian Mixture Models, finding GMM images more diverse but less sharp.',
     url: '#',
     image: porfolioImage6,
+  },
+];
+
+/**
+ * Highlights section
+ */
+export const highlights: HighlightItem[] = [
+  {
+    title: 'Hackathon Sprint',
+    description: 'Led an IIT-wide hackathon team that built a visual analytics dashboard in 24 hours.',
+    tag: 'Hackathon',
+    image: porfolioImage1,
+  },
+  {
+    title: 'ICLR 2024, Singapore',
+    description: 'Presented research on tree-ring watermarking for rectified flow models.',
+    tag: 'Conference',
+    image: porfolioImage2,
+  },
+  {
+    title: 'Research Residency',
+    description: 'Visited AI research labs across India to collaborate on multimodal systems.',
+    tag: 'Research',
+    image: porfolioImage3,
+  },
+  {
+    title: 'Community Workshop',
+    description: 'Organised a hands-on workshop on trustworthy AI for 150+ students.',
+    tag: 'Workshop',
+    image: porfolioImage4,
   },
 ];
 

@@ -1,35 +1,45 @@
 import dynamic from 'next/dynamic';
-import {FC, memo} from 'react';
+import {GetStaticProps, NextPage} from 'next';
+import {memo} from 'react';
 
 import Page from '../components/Layout/Page';
-import About from '../components/Sections/About';
+import Blogs from '../components/Sections/Blogs';
 import Contact from '../components/Sections/Contact';
-// import Footer from '../components/Sections/Footer';
 import Hero from '../components/Sections/Hero';
-// import Portfolio from '../components/Sections/Portfolio';
-// import Publications from '../components/Sections/Publications';
-import Resume from '../components/Sections/Resume';
-// import Testimonials from '../components/Sections/Testimonials';
+import Highlights from '../components/Sections/Highlights';
 import {homePageMeta} from '../data/data';
+import {getAllBlogsMeta} from '../lib/blogs';
+import {BlogMeta} from '../types/blog';
 
 // eslint-disable-next-line react-memo/require-memo
 const Header = dynamic(() => import('../components/Sections/Header'), {ssr: false});
 
-const Home: FC = memo(() => {
+type HomeProps = {
+  blogPosts: BlogMeta[];
+};
+
+const Home: NextPage<HomeProps> = memo(({blogPosts}) => {
   const {title, description} = homePageMeta;
+
   return (
     <Page description={description} title={title}>
       <Header />
       <Hero />
-      <About />
-      <Resume />
-      {/* <Publications /> */}
-      {/* <Portfolio /> */}
-      {/* <Testimonials /> */}
+      <Highlights />
+      <Blogs posts={blogPosts} />
       <Contact />
-      {/* <Footer /> */}
     </Page>
   );
 });
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const blogPosts = getAllBlogsMeta().slice(0, 4);
+
+  return {
+    props: {
+      blogPosts,
+    },
+  };
+};
 
 export default Home;
