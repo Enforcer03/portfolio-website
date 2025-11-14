@@ -21,7 +21,7 @@ export interface HomepageMeta {
  * Hero section
  */
 export interface Hero {
-  imageSrc?: string;
+  imageSrc?: string | StaticImageData;
   name: string;
   interests?: string[];
   description: JSX.Element;

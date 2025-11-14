@@ -1,9 +1,9 @@
 import {FC, memo} from 'react';
 
 import Page from '../components/Layout/Page';
+import Contact from '../components/Sections/Contact';
 import Header from '../components/Sections/Header';
 import PageIntro from '../components/Sections/PageIntro';
-import Contact from '../components/Sections/Contact';
 import TimelineItem from '../components/Sections/Resume/TimelineItem';
 import {experience, homePageMeta} from '../data/data';
 
@@ -29,8 +29,8 @@ const WorkPage: FC = memo(() => {
     <Page description={`${description} - Work`} title={`${title} | Work`}>
       <Header />
       <PageIntro
-        eyebrow="WORK"
         description="Internships and residencies where I transformed research ideas into measurable impact."
+        eyebrow="WORK"
         title="Hands-on experience across quant, risk, and AI research."
       />
       <section className="px-4 pb-10 sm:px-6 lg:px-8">

@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import {GetStaticProps, NextPage} from 'next';
+import Link from 'next/link';
 import {memo} from 'react';
 
 import Page from '../../components/Layout/Page';

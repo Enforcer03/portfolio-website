@@ -11,6 +11,7 @@ import GithubIcon from '../components/Icon/GithubIcon';
 import GoogleScholarIcon from '../components/Icon/GoogleScholarIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
+import heroBackground from '../images/display-pic1.png';
 import profilepic from '../images/dp-white-back.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -64,6 +65,7 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  * Hero section
  */
 export const heroData: Hero = {
+  imageSrc: heroBackground,
   name: `I'm Ved Umrajkar.`,
   // interests: ['Machine Learning', 'Computer Vision', 'Applied Statistics', 'Multimodal AI', 'Trustworthy AI'],
   description: (

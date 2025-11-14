@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic';
 import {GetStaticProps, NextPage} from 'next';
+import dynamic from 'next/dynamic';
 import {memo} from 'react';
 
 import Page from '../components/Layout/Page';

@@ -1,9 +1,9 @@
 import {FC, memo} from 'react';
 
 import Page from '../components/Layout/Page';
+import Contact from '../components/Sections/Contact';
 import Header from '../components/Sections/Header';
 import PageIntro from '../components/Sections/PageIntro';
-import Contact from '../components/Sections/Contact';
 import TimelineItem from '../components/Sections/Resume/TimelineItem';
 import {education, homePageMeta} from '../data/data';
 
@@ -14,8 +14,8 @@ const EducationPage: FC = memo(() => {
     <Page description={`${description} - Education`} title={`${title} | Education`}>
       <Header />
       <PageIntro
-        eyebrow="EDUCATION"
         description="Coursework that blends rigorous mathematics with applied machine learning and decision science."
+        eyebrow="EDUCATION"
         title="A timeline of learning and layered curiosity."
       />
       <section className="px-4 pb-12 sm:px-6 lg:px-8">
