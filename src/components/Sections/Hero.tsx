@@ -39,7 +39,7 @@ const Hero: FC = memo(() => {
         )}
 
         <div className="relative z-10 w-full px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-32 lg:px-16 lg:pb-32 lg:pt-40">
-          <div className="mx-auto flex w-full max-w-4xl flex-col gap-5 text-left text-neutral-900 dark:text-white sm:gap-6">
+          <div className="mr-auto flex w-full max-w-4xl flex-col gap-5 text-left text-neutral-900 dark:text-white sm:gap-6">
             <h1 className="text-balance text-4xl font-bold text-neutral-900 animate-fade-up dark:text-white sm:text-[2.8rem] lg:text-6xl">
               {name}
             </h1>

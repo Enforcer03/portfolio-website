@@ -1,0 +1,305 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\definecolor{darkbrown}{RGB}{50,10,180}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkbrown, % Dark brown color for links
+    urlcolor=darkbrown,  % Dark brown color for URLs
+    citecolor=darkbrown   % Dark brown color for citations
+}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{00pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+% Command for Education
+\newcommand{\resumeEducationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \normalsize\textbf{#1} & \normalsize{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Command for Experience
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \normalsize\textbf{#1 $\vert$ \textit{\small#3}} & \normalsize{\small #2} \\ % Company | Designation on left, Date on right (not bold)
+      \textit{\small#4} & \\ % Location on second line, left
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Command for Projects
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \normalsize\textbf{#1} & \normalsize{\small #2}\\ % Project title bold, date not bold
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in,itemsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Ved Umrajkar} \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91 8446887816 ~ \href{mailto:v_umrajkar@ma.iitr.ac.in}{\raisebox{-0.2\height}\faEnvelope\  \underline{v\_umrajkar@ma.iitr.ac.in}} ~ 
+    \href{https://www.linkedin.com/in/ved-umrajkar-4530b6215}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/ved-umrajkar}}  ~
+    \href{https://github.com/Enforcer03}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/Enforcer03}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {JPMorgan Chase}{May 2025 - July 2025}
+      {Intern}{Bengaluru}
+      \resumeItemListStart
+        \resumeItem{Implemented and deployed a production-grade \textbf{macroeconomic forecasting model} for investment management fees within the Data Science CoE.}
+        \resumeItem{Built a granular \textbf{time-series headcount forecasting} prototype to account for COVID-driven disparities in macroeconomic modelling.}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Hashstack Finance}{August 2023 - February 2024}
+      {Data Scientist}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built a real-time \textbf{risk management and analytics framework} with \textbf{Starknet}, \textbf{PostgreSQL}, and Streamlit to model debt health and solvency metrics.}
+        \resumeItem{Integrated mean-variance \textbf{portfolio optimization} into the backend to flag impermanent-loss risk, delivering a \textbf{15\% lift in outlier detection accuracy}.}
+        \resumeItem{Designed a unified alert system and \textbf{growth analytics dashboard} using Streamlit and Python, integrating \textbf{Mixpanel}, \textbf{Google Analytics}, and on-chain Starknet data.}
+      \resumeItemListEnd
+
+    % \resumeSubheading
+    %   {Hloov}{January 2023 - March 2023}
+    %   {Data Science Intern}{Remote}
+    %   \resumeItemListStart
+    %     \resumeItem{Developed a \textbf{Transfer Learning (VGG-19)} model in \textbf{PyTorch} to detect cracks in buildings with \textbf{99.43\% accuracy}.}
+    %     \resumeItem{Integrated \textbf{SARIMAX} for \textbf{time-series anomaly detection} in sensors with \textbf{96.7\% accuracy}.}
+    %     \resumeItem{Designed and implemented a dynamically trained weekly forecasting model using \textbf{Long Short-Term Memory (LSTM)} networks for electromagnetic sensor data.}
+    %   \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------RESEARCH & PROJECTS-----------
+\section{Research \& Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+    
+      \resumeProjectHeading % Bolding is now handled by the command
+          {Tree Ring Watermark Detection in Rectified Flow Models \href{https://example.com/code}{[Code]} \href{https://example.com/paper}{[Paper]}}
+          {January 2025 - April 2025}
+          \resumeItemListStart
+            \resumeItem{Benchmarked Tree Ring watermark detectability and false-positive rates on DDIM (Stable Diffusion 2.1) vs \textbf{rectified flow transformers} (FLUX.1-dev) using standardized perturbation budgets.}
+            \resumeItem{Diagnosed inversion instability in rectified flows (FlowEuler, OT-CFM) and proposed robust watermark recovery settings for \textbf{text-to-image safety pipelines}.}
+            \resumeItem{Presented empirical limits, dataset curation, and statistical separability results at \textbf{ICLR 2025}, Singapore Expo.}
+          \resumeItemListEnd
+          \vspace{-10pt} % Reduced space
+
+      \resumeProjectHeading
+          {DAC-LoRA: Dynamic Adversarial Curriculum for Finetuning VLMs \href{https://example.com/code}{[Code]} \href{https://example.com/paper}{[Paper]}}
+          {2025}
+          \resumeItemListStart
+            \resumeItem{Introduces \textbf{Dynamic Adversarial Curriculum (DAC-LoRA)}: LoRA adapters trained with progressively stronger PGD attacks to harden CLIP-style VLMs, presented at the \emph{Workshop on Safe Multimodal AI Systems, ICCV 2025}.}
+            \resumeItem{Balances \textbf{robust accuracy} and adaptation cost via small-rank adapters and curriculum pacing, outperforming vanilla LoRA and single-stage adversarial fine-tuning on few-shot benchmarks.}
+          \resumeItemListEnd
+          \vspace{-10pt} % Reduced space
+
+      \resumeProjectHeading
+          {Multi-Modal (Video-Text) Person Re-Identification \href{https://example.com/code}{[Code]}}
+          {December 2024 - Present}
+          \resumeItemListStart
+            \resumeItem{Building a video-text re-ID stack with tracklet encoders and a transformer text encoder, aligned via \textbf{contrastive and triplet losses} for open-vocabulary retrieval.}
+            \resumeItem{Running \textbf{ablation studies} on MEVID, LSVID, ILIDS, Duke, and G2A; reporting mAP/CMC gains from temporal pooling, query expansion, and hard-negative mining (ongoing).}
+          \resumeItemListEnd
+          \vspace{-10pt} % Reduced space
+
+      \resumeProjectHeading
+          {Simulating Optimal Portfolios through Multi-Risk Measure Optimization \href{https://example.com/code}{[Code]}}
+          {February 2024 - April 2024}
+          \resumeItemListStart
+            \resumeItem{Constructed S\&P 500 portfolios with \textbf{Riskfolio}, maximizing Sharpe while enforcing turnover and sector exposure constraints to keep allocations realistic.}
+            \resumeItem{Stress-tested allocations using standard deviation, \textbf{CVaR}, \textbf{MDD}, and MAD to quantify tail risk and drawdown resilience.}
+            \resumeItem{Ran \textbf{Monte Carlo bootstraps} and log-normal simulations for forward-looking return bands and downside probability estimates.}
+          \resumeItemListEnd
+          \vspace{-10pt} % Reduced space
+          
+      % \resumeProjectHeading
+      %     {Performance Analysis of VGG19 and ResNet50 Architectures $|$ \emph{IIT Roorkee}}
+      %     {February 2024 - March 2024}
+      %     \resumeItemListStart
+      %       \resumeItem{Employed \textbf{Transfer Learning} by adding a fully connected layer on top of both \textbf{VGG19} and \textbf{ResNet50} architectures, pretrained on ImageNet, to classify celebrity faces.}
+      %       \resumeItem{Calculated precision, recall, \textbf{F1-score}, and confusion matrix to comprehensively evaluate model performance.}
+      %       \resumeItem{Concluded that the VGG19 model significantly outperformed ResNet50, achieving an overall \textbf{accuracy improvement of 11\%} and a higher average F1-score.}
+      %     \resumeItemListEnd
+      %     \vspace{-10pt} % Reduced space
+
+      % \resumeProjectHeading
+      %     {GANs vs Mixture Models for Image Generation $|$ \emph{IIT Roorkee}}
+      %     {March 2023 - April 2023}
+      %     \resumeItemListStart
+      %       \resumeItem{Developed modular implementations of \textbf{Generative Adversarial Networks (DCGAN, WGAN)} models.}
+      %       \resumeItem{Applied the Expectation Maximization Algorithm on the log likelihood of \textbf{Gaussian Mixture Models (GMM)} to determine underlying distributions, comparing results with GANS.}
+      %       \resumeItem{Deduced that GMM-generated images were more diverse but lacked the sharpness of \textbf{GAN outputs}.}
+      %     \resumeItemListEnd
+      %     \vspace{-10pt} % Reduced space
+          
+      \resumeProjectHeading
+          {ForecastPro \href{https://example.com/code}{[Code]}}
+          {March 2023 - April 2023}
+          \resumeItemListStart
+            \resumeItem{Built a hybrid forecaster combining \textbf{LSTNet} with classical \textbf{ARIMA/SARIMAX} baselines to cover seasonal, trend, and sudden-shift patterns.}
+            \resumeItem{Engineered lagged covariates, holiday flags, and rolling statistics; tuned ConvLSTM windows to stabilize long-horizon predictions.}
+            \resumeItem{Evaluated on AirQuality UCI and Yahoo Finance with \textbf{MAPE}/RMSE, showing consistent lift over pure statistical models.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeEducationHeading % Using new command for correct formatting
+      {Indian Institute of Technology, Roorkee}
+      {}
+      {Bachelors and Masters, Mathematics and Computing}
+      {CGPA: 8.605/10.0}
+  \resumeSubHeadingListEnd
+    {\textbf{Coursework:} Statistical Machine Learning, Natural Language Processing, Stochastic Calculus, Design and Analysis of Algorithms, Mathematical Cryptography}
+
+\vspace{-5pt}
+
+%-----------AWARDS-----------
+\section{Awards / Scholarships}
+    \resumeItemListStart
+        \resumeItem{Silver Medal at the Inter-IIT Tech Meet 13.0 at IIT Bombay- Building \textbf{AI-powered Product} for Dream11.}
+        \resumeItem{Secured \textbf{16th Rank} in \textbf{Amazon ML Challenge 2024} (10,000+ candidates).}
+        \resumeItem{Qualified for the India Terminal Coding competition hosted by Correlation One in partnership with Citadel Securities.}
+        \resumeItem{All India Rank \textbf{342} in KVPY Fellowship Examination.}
+        \resumeItem{State Topper from Maharashtra in Astronomy Olympiad (IOQA-2020).}
+        \resumeItem{Rated \textbf{Expert on Kaggle} (amongst \textbf{top 1\%}, Global Rank 1890, handle: vedumrajkar).}
+        \resumeItem{Awarded the INSPIRE Scholarship by the Government of India for undergraduates in research.}
+        \resumeItem{All India Rank \textbf{1336} in JEE Advanced (\textbf{Top 0.2\%} of all candidates).}
+    \resumeItemListEnd
+\vspace{-5pt}
+
+%-----------VOLUNTEERING-----------
+\section{Volunteering}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Data Science Group, IIT Roorkee}{December 2023 - Present}
+      {Joint Secretary}{IIT Roorkee}
+      \resumeItemListStart
+        \resumeItem{Mentored students pursuing careers in \textbf{machine learning}, fostering a campus community around applied AI.}
+        \resumeItem{Coordinated campus projects and events, hosting \textbf{data science workshops} and managing member recruitment.}
+        \resumeItem{Hosted a two-week \textbf{supervised learning} hackathon on the UCI Gesture Phase Segmentation dataset.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-5pt}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in,itemsep=2pt,topsep=0pt]
+    \item \textbf{Areas of Interest:} Generative AI (GANs, diffusion models), Large Language Models (LLMs), Machine Learning, Computer Vision, Multimodal Learning
+    \item \textbf{Languages:} Python, C++, SQL
+    \item \textbf{Frameworks/Libraries:} PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, NLTK, Hugging Face, Streamlit.
+    \item \textbf{Coursework:} Statistical Machine Learning, Natural Language Processing, Stochastic Calculus, Design and Analysis of Algorithms, Mathematical Cryptography
+  \end{itemize}
+ \vspace{-16pt}
+
+
+\end{document}
