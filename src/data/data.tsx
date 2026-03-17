@@ -4,7 +4,7 @@ import GithubIcon from '../components/Icon/GithubIcon';
 import GoogleScholarIcon from '../components/Icon/GoogleScholarIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import profilepic from '../images/dp-white-back.png';
+import profilepic from '../images/dp-white-back.jpg';
 import {
   About,
   ContactSection,
