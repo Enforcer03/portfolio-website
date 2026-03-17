@@ -1,10 +1,15 @@
 import {ChevronDownIcon} from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import {FC, memo} from 'react';
+import {CSSProperties, FC, memo} from 'react';
 
 import {heroData, SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 import Socials from '../Socials';
+
+const imageStyle: CSSProperties = {
+  maskImage: 'radial-gradient(circle, black 55%, transparent 90%)',
+  WebkitMaskImage: 'radial-gradient(circle, black 55%, transparent 90%)',
+};
 
 const Hero: FC = memo(() => {
   const {imageSrc, name, description, actions} = heroData;
@@ -20,7 +25,7 @@ const Hero: FC = memo(() => {
               height={224}
               priority
               src={imageSrc}
-              style={{maskImage: 'radial-gradient(circle, black 55%, transparent 90%)', WebkitMaskImage: 'radial-gradient(circle, black 55%, transparent 90%)'}}
+              style={imageStyle}
               width={224}
             />
           </div>

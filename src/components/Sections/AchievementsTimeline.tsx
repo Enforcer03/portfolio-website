@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import { FC, memo, useCallback, useEffect, useRef, useState } from 'react';
+import {FC, memo, useCallback, useEffect, useRef, useState} from 'react';
 
-import { achievementsTimeline, SectionId } from '../../data/data';
+import {achievementsTimeline, SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 
 const tagStyle: Record<
@@ -51,7 +51,7 @@ const ZONE_H = 380;
 const NODE_W = 210;
 const SPEED = 0.15; 
 
-const Card: FC<{ item: (typeof achievementsTimeline)[number] }> = memo(({ item }) => {
+const Card: FC<{item: (typeof achievementsTimeline)[number]}> = memo(({item}) => {
   const s = tagStyle[item.tag] ?? fallback;
   return (
     <div
@@ -186,13 +186,13 @@ const AchievementsTimeline: FC = memo(() => {
           <div
             className="timeline-scroll overflow-x-scroll"
             ref={scrollRef}
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
             <style>{`.timeline-scroll::-webkit-scrollbar { display: none; }`}</style>
 
-            <div className="relative" style={{ width: `${filtered.length * NODE_W}px` }}>
+            <div className="relative" style={{width: `${filtered.length * NODE_W}px`}}>
               <div
                 className="absolute left-0 right-0 h-px bg-neutral-200 dark:bg-neutral-700"
-                style={{ top: `${ZONE_H + 8}px` }}
+                style={{top: `${ZONE_H + 8}px`}}
               />
 
               <div className="flex">
@@ -203,10 +203,10 @@ const AchievementsTimeline: FC = memo(() => {
                     <div
                       className="flex flex-shrink-0 flex-col items-center"
                       key={`${item.title}-${idx}`} 
-                      style={{ width: `${NODE_W}px` }}>
+                      style={{width: `${NODE_W}px`}}>
                       <div
                         className="flex w-full items-end justify-center px-2 pb-4"
-                        style={{ height: `${ZONE_H}px` }}>
+                        style={{height: `${ZONE_H}px`}}>
                         {isAbove && <Card item={item} />}
                       </div>
 
@@ -219,7 +219,7 @@ const AchievementsTimeline: FC = memo(() => {
 
                       <div
                         className="flex w-full items-start justify-center px-2 pt-4"
-                        style={{ height: `${ZONE_H}px` }}>
+                        style={{height: `${ZONE_H}px`}}>
                         {!isAbove && <Card item={item} />}
                       </div>
                     </div>
