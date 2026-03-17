@@ -5,29 +5,22 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 import {FC, Fragment, memo, useCallback, useMemo, useState} from 'react';
 
-import {SectionId} from '../../data/data';
+import {SectionId, siteLinks} from '../../data/data';
 import {useNavObserver} from '../../hooks/useNavObserver';
 import ThemeToggle from '../ThemeToggle';
 
 export const headerID = 'headerNav';
 
 const pageLinks = [
-  {label: 'Home', href: '/'},
-  {label: 'About', href: '/about'},
-  {label: 'Education', href: '/education'},
-  {label: 'Work', href: '/work'},
-  {label: 'Blog', href: '/blog'},
+  {label: 'Home', href: '/', external: false},
+  {label: 'Blog', href: siteLinks.blog, external: true},
 ];
 
 const Header: FC = memo(() => {
   const {pathname} = useRouter();
-  const isHome = pathname === '/';
 
   const [currentSection, setCurrentSection] = useState<SectionId | null>(null);
-  const navSections = useMemo(
-    () => (isHome ? [SectionId.Highlights, SectionId.Blogs, SectionId.Contact] : []),
-    [isHome],
-  );
+  const navSections = useMemo(() => [], []);
 
   const handleIntersection = useCallback((section: SectionId | null) => {
     section && setCurrentSection(section);
@@ -41,26 +34,37 @@ const Header: FC = memo(() => {
   return (
     <>
       <header className="pointer-events-none fixed top-4 z-50 w-full px-4 sm:px-6" id={headerID}>
-        <div className="pointer-events-auto mx-auto flex max-w-6xl items-center gap-3 rounded-3xl border border-neutral-200/80 bg-white/80 px-4 py-2.5 shadow-lg shadow-black/5 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-white/10 dark:bg-neutral-900/70 dark:shadow-black/40">
+        <div className="pointer-events-auto mx-auto flex max-w-6xl items-center gap-3 rounded-3xl border border-neutral-200/80 bg-white/85 px-4 py-2.5 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:border-white/10 dark:bg-neutral-900/80">
           <Link
-            className="text-xs font-semibold uppercase tracking-[0.4em] text-neutral-500 transition-colors duration-200 hover:text-orange-500 dark:text-neutral-300"
+            className="text-xs font-semibold uppercase tracking-[0.35em] text-neutral-600 transition-colors duration-200 hover:text-neutral-900 dark:text-neutral-200"
             href="/">
             Ved Umrajkar
           </Link>
           <nav className="hidden items-center gap-4 text-sm font-medium text-neutral-600 dark:text-neutral-200 md:flex">
-            {pageLinks.map(({label, href}) => (
-              <Link
-                className={classNames(
-                  'rounded-full px-3 py-1 transition-colors duration-200',
-                  pathname === href
-                    ? 'bg-neutral-900/90 text-white dark:bg-white/90 dark:text-neutral-900'
-                    : 'text-neutral-600 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white',
-                )}
-                href={href}
-                key={href}>
-                {label}
-              </Link>
-            ))}
+            {pageLinks.map(({label, href, external}) =>
+              external ? (
+                <a
+                  className="rounded-full px-3 py-1 transition-colors duration-200 text-neutral-600 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
+                  href={href}
+                  key={href}
+                  rel="noopener noreferrer"
+                  target="_blank">
+                  {label}
+                </a>
+              ) : (
+                <Link
+                  className={classNames(
+                    'rounded-full px-3 py-1 transition-colors duration-200',
+                    pathname === href
+                      ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900'
+                      : 'text-neutral-600 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white',
+                  )}
+                  href={href}
+                  key={href}>
+                  {label}
+                </Link>
+              ),
+            )}
           </nav>
           <div className="ml-auto hidden items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.35em] text-neutral-400 dark:text-neutral-500 lg:flex">
             {navSections.map(section => (
@@ -68,8 +72,8 @@ const Header: FC = memo(() => {
                 className={classNames(
                   'rounded-full px-3 py-1 transition-colors duration-200',
                   currentSection === section
-                    ? 'bg-orange-500/10 text-orange-600 dark:bg-orange-400/20 dark:text-orange-200'
-                    : 'text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200',
+                    ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900'
+                    : 'text-neutral-500 hover:text-neutral-800 dark:hover:text-white',
                 )}
                 href={`/#${section}`}
                 key={section}>
@@ -81,7 +85,7 @@ const Header: FC = memo(() => {
             <ThemeToggle />
             <button
               aria-label="Open navigation"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200/70 bg-white/80 text-neutral-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:text-orange-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white md:hidden dark:border-white/10 dark:bg-neutral-800/80 dark:text-neutral-100 dark:focus-visible:ring-offset-neutral-900"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200/70 bg-white/80 text-neutral-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white md:hidden dark:border-white/10 dark:bg-neutral-800/80 dark:text-neutral-100 dark:focus-visible:ring-offset-neutral-900"
               onClick={toggleOpen}
               type="button">
               <Bars3BottomRightIcon className="h-6 w-6" />
@@ -135,7 +139,7 @@ const MobileNav: FC<{
               </p>
               <button
                 aria-label="Close navigation"
-                className="rounded-full border border-neutral-200/80 p-2 text-neutral-600 transition hover:text-orange-500 focus:outline-none dark:border-white/10 dark:text-neutral-200"
+                className="rounded-full border border-neutral-200/80 p-2 text-neutral-600 transition hover:text-neutral-900 focus:outline-none dark:border-white/10 dark:text-neutral-200"
                 onClick={onClose}
                 type="button">
                 <XMarkIcon className="h-5 w-5" />
@@ -143,20 +147,32 @@ const MobileNav: FC<{
             </div>
             <div className="mt-6 flex flex-col gap-6">
               <nav className="flex flex-col gap-2">
-                {pageLinks.map(({label, href}) => (
-                  <Link
-                    className={classNames(
-                      'rounded-2xl border px-4 py-3 text-base font-semibold transition-colors duration-150',
-                      currentPath === href
-                        ? 'border-neutral-900 bg-neutral-900 text-white dark:border-white/80 dark:bg-white/90 dark:text-neutral-900'
-                        : 'border-transparent bg-neutral-100 text-neutral-700 hover:border-neutral-400 dark:bg-neutral-800/80 dark:text-neutral-100',
-                    )}
-                    href={href}
-                    key={href}
-                    onClick={onClose}>
-                    {label}
-                  </Link>
-                ))}
+                {pageLinks.map(({label, href, external}) =>
+                  external ? (
+                    <a
+                      className="rounded-2xl border border-transparent bg-neutral-100 px-4 py-3 text-base font-semibold text-neutral-700 transition-colors duration-150 hover:border-neutral-400 dark:bg-neutral-800/80 dark:text-neutral-100"
+                      href={href}
+                      key={href}
+                      onClick={onClose}
+                      rel="noopener noreferrer"
+                      target="_blank">
+                      {label}
+                    </a>
+                  ) : (
+                    <Link
+                      className={classNames(
+                        'rounded-2xl border px-4 py-3 text-base font-semibold transition-colors duration-150',
+                        currentPath === href
+                          ? 'border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-neutral-900'
+                          : 'border-transparent bg-neutral-100 text-neutral-700 hover:border-neutral-400 dark:bg-neutral-800/80 dark:text-neutral-100',
+                      )}
+                      href={href}
+                      key={href}
+                      onClick={onClose}>
+                      {label}
+                    </Link>
+                  ),
+                )}
               </nav>
               {navSections.length ? (
                 <div className="flex flex-col gap-3">
@@ -169,7 +185,7 @@ const MobileNav: FC<{
                         className={classNames(
                           'rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em]',
                           currentSection === section
-                            ? 'bg-orange-500/15 text-orange-600 dark:bg-orange-400/20 dark:text-orange-200'
+                            ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-900'
                             : 'bg-neutral-100 text-neutral-500 dark:bg-neutral-800/70 dark:text-neutral-300',
                         )}
                         href={`/#${section}`}

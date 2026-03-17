@@ -35,3 +35,29 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# archived unused files
+archive/
+
+# eslint cache
+.eslintcache
+
+# LaTeX intermediate files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.dvi
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb

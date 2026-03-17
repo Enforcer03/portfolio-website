@@ -43,6 +43,7 @@ export interface About {
   description: string;
   achievements?: string[];
   aboutItems: AboutItem[];
+  gallery?: Array<string | StaticImageData>;
 }
 
 export interface AboutItem {
@@ -90,6 +91,17 @@ export interface HighlightItem {
   description: string;
   tag: string;
   image: string | StaticImageData;
+}
+
+/**
+ * Achievements timeline
+ */
+export interface TimelineAchievement {
+  date: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  tag: string;
 }
 
 /**

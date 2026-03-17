@@ -11,7 +11,7 @@ const ThemeToggle: FC = memo(() => {
   return (
     <button
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-      className="relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200/70 bg-white/70 text-neutral-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:text-orange-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/10 dark:bg-neutral-800/80 dark:text-neutral-100 dark:focus-visible:ring-offset-neutral-900"
+      className="relative inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-200/70 bg-white/70 text-neutral-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-white/10 dark:bg-neutral-800/80 dark:text-neutral-100 dark:focus-visible:ring-offset-neutral-900"
       onClick={toggleTheme}
       type="button">
       <SunIcon

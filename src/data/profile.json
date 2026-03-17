@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "title": "Ved Umrajkar | Resume",
+    "description": "Resume of Ved Umrajkar, a student of Mathematics and Computing at IIT Roorkee."
+  },
+  "hero": {
+    "name": "Ved Umrajkar",
+    "paragraphs": [
+      "Final-year BS-MS student in **Mathematics and Computing** at IIT Roorkee, focused on trustworthy machine learning, computer vision, and applied statistics for real-world systems.",
+      "Experience across macro-fee forecasting at JPMorgan Chase, risk analytics on Starknet at Hashstack Finance, and agentic evidence selection research at PavoAI — with papers at ICLR 2025, ICCV 2025, and KDD 2026."
+    ],
+    "actions": [
+      {
+        "href": "/assets/resume.pdf",
+        "text": "Download Resume",
+        "primary": true,
+        "icon": "download"
+      },
+      {
+        "href": "mailto:v_umrajkar@ma.iitr.ac.in",
+        "text": "Email Me",
+        "primary": false
+      }
+    ]
+  },
+  "socials": [
+    { "label": "Github",        "href": "https://github.com/Enforcer03" },
+    { "label": "LinkedIn",      "href": "https://www.linkedin.com/in/ved-umrajkar-4530b6215" },
+    { "label": "GoogleScholar", "href": "https://scholar.google.com/citations?user=MgMpgRgAAAAJ&hl=en" },
+    { "label": "Twitter",       "href": "https://twitter.com/ved_umrajkar" }
+  ],
+  "timeline": [
+    {
+      "date": "2021",
+      "title": "IIT Roorkee",
+      "subtitle": "BS-MS, Mathematics & Computing",
+      "description": "Enrolled in the 5-year integrated program. CGPA 8.605. Specialised in ML, Financial Risk, and Statistical Inference.",
+      "tag": "Education"
+    },
+    {
+      "date": "2023–25",
+      "title": "Data Science Group, IIT Roorkee",
+      "subtitle": "Joint Secretary",
+      "description": "Mentored students in ML, coordinated campus projects and workshops, and hosted a supervised-learning hackathon on the UCI Gesture Phase Segmentation dataset.",
+      "tag": "Swag"
+    },
+    {
+      "date": "Aug 2023",
+      "title": "Hashstack Finance",
+      "subtitle": "Data Scientist",
+      "description": "Built a Starknet risk dashboard, boosted anomaly coverage by 15% with a mean-variance optimiser, and shipped automated growth alerts. Aug 2023 – Feb 2024.",
+      "tag": "Industry"
+    },
+    {
+      "date": "2024",
+      "title": "Inter-IIT Tech Meet 13.0",
+      "subtitle": "Silver Medal · IIT Bombay",
+      "description": "Silver medal building an AI-powered product for Dream11. Also placed 16th in Amazon ML Challenge 2024 (10,000+ candidates) and qualified for Citadel's India Terminal Coding competition.",
+      "tag": "Swag"
+    },
+    {
+      "date": "Jan 2025",
+      "title": "Tree Ring Watermarks",
+      "subtitle": "ICLR 2025 Workshop Paper",
+      "description": "Benchmarked Tree Ring watermark detectability on DDIM vs rectified flow transformers (FLUX.1-dev); diagnosed inversion instability and proposed robust recovery settings for text-to-image safety pipelines.",
+      "tag": "Research"
+    },
+    {
+      "date": "Apr 2025",
+      "title": "ICLR 2025",
+      "subtitle": "Singapore · Conference",
+      "description": "Attended the International Conference on Learning Representations. Presented Tree Ring watermark workshop paper at Singapore Expo.",
+      "tag": "Swag"
+    },
+    {
+      "date": "May 2025",
+      "title": "JPMorgan Chase",
+      "subtitle": "Software Engineering Intern · Bengaluru",
+      "description": "Productionised a macroeconomic-indicator-driven investment management fees forecasting model and built COVID-aware headcount sensitivity prototypes for Asset & Wealth Management. May – Jul 2025.",
+      "tag": "Industry"
+    },
+    {
+      "date": "2025",
+      "title": "DAC-LoRA",
+      "subtitle": "ICCV 2025 — Workshop on Safe Multimodal AI",
+      "description": "Dynamic Adversarial Curriculum for LoRA-based VLM fine-tuning, outperforming vanilla LoRA and single-stage adversarial training on few-shot benchmarks.",
+      "tag": "Research"
+    },
+    {
+      "date": "Feb 2026",
+      "title": "PavoAI",
+      "subtitle": "Research Intern · Remote",
+      "description": "Co-authored 'Agentic Evidence Selection for Decision-Making under Cognitive Constraints' (KDD 2026 Research Track); formalised task-agnostic evidence selection as constrained submodular optimisation achieving 95.4% of theoretical maximum semantic coverage.",
+      "tag": "Research"
+    }
+  ],
+  "contact": {
+    "email": "v_umrajkar@ma.iitr.ac.in"
+  },
+  "links": {
+    "blog": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }
+}

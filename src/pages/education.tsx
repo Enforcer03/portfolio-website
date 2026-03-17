@@ -1,37 +1,30 @@
-import {FC, memo} from 'react';
+import Link from 'next/link';
+import {memo} from 'react';
 
 import Page from '../components/Layout/Page';
-import Contact from '../components/Sections/Contact';
 import Header from '../components/Sections/Header';
 import PageIntro from '../components/Sections/PageIntro';
-import TimelineItem from '../components/Sections/Resume/TimelineItem';
-import {education, homePageMeta} from '../data/data';
+import {homePageMeta} from '../data/data';
 
-const EducationPage: FC = memo(() => {
+const EducationRedirect = memo(() => {
   const {title, description} = homePageMeta;
 
   return (
     <Page description={`${description} - Education`} title={`${title} | Education`}>
       <Header />
-      <PageIntro
-        description="Coursework that blends rigorous mathematics with applied machine learning and decision science."
-        eyebrow="EDUCATION"
-        title="A timeline of learning and layered curiosity."
-      />
-      <section className="px-4 pb-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl">
-          <div className="rounded-3xl border border-neutral-200/80 bg-white/90 p-6 shadow-2xl shadow-black/5 dark:border-white/10 dark:bg-neutral-900/80 dark:shadow-black/40 sm:p-10">
-            <div className="flex flex-col divide-y divide-neutral-200/80 dark:divide-white/10">
-              {education.map((item, idx) => (
-                <TimelineItem item={item} key={`${item.title}-${idx}`} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      <Contact />
+      <PageIntro eyebrow="EDUCATION" title="This page is archived.">
+        <p className="text-neutral-600 dark:text-neutral-200">
+          Please use the Home, About, or Blog sections for current content.
+        </p>
+        <Link
+          className="mt-4 inline-flex w-max items-center gap-2 rounded-full border border-neutral-300 px-4 py-2 text-sm font-semibold text-neutral-800 transition hover:-translate-y-0.5 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 dark:border-white/20 dark:text-white dark:hover:bg-neutral-800"
+          href="/">
+          Return home
+          <span aria-hidden="true">→</span>
+        </Link>
+      </PageIntro>
     </Page>
   );
 });
 
-export default EducationPage;
+export default EducationRedirect;

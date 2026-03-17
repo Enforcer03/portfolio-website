@@ -27,7 +27,7 @@ const BlogPostPage: NextPage<BlogPostProps> = memo(({post}) => {
       <article className="px-4 pt-28 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <Link
-            className="text-xs font-semibold uppercase tracking-[0.35em] text-neutral-500 transition hover:text-orange-500 dark:text-neutral-400"
+            className="text-xs font-semibold uppercase tracking-[0.35em] text-neutral-500 transition hover:text-neutral-800 dark:text-neutral-400"
             href="/blog">
             ← Back to blog
           </Link>
@@ -35,7 +35,7 @@ const BlogPostPage: NextPage<BlogPostProps> = memo(({post}) => {
             {title}
           </h1>
           <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-400">
-            {new Date(date).toLocaleDateString(undefined, {month: 'long', day: 'numeric', year: 'numeric'})}
+            {new Date(date).toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'})}
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             {tags.map(tag => (
