@@ -1,0 +1,260 @@
+{
+  "basics": {
+    "name": "Ved Umrajkar",
+    "phone": "+91 8446887816",
+    "email": "v_umrajkar@ma.iitr.ac.in",
+    "links": [
+      { "type": "linkedin", "url": "https://www.linkedin.com/in/ved-umrajkar-4530b6215", "label": "linkedin.com/in/ved-umrajkar" },
+      { "type": "github",   "url": "https://github.com/Enforcer03",                     "label": "github.com/Enforcer03" }
+    ]
+  },
+
+  "website": {
+    "meta": {
+      "title": "Ved Umrajkar | Resume",
+      "description": "Resume of Ved Umrajkar, a student of Mathematics and Computing at IIT Roorkee."
+    },
+    "hero": {
+      "paragraphs": [
+        "Final-year BS-MS student in **Mathematics and Computing** at IIT Roorkee, focused on trustworthy machine learning, computer vision, and applied statistics for real-world systems.",
+        "Experience across macro-fee forecasting at JPMorgan Chase, risk analytics on Starknet at Hashstack Finance, and agentic evidence selection research at PavoAI — with papers at ICLR 2025, ICCV 2025, and KDD 2026."
+      ],
+      "actions": [
+        { "href": "/assets/resume.pdf",                 "text": "Download Resume", "primary": true,  "icon": "download" },
+        { "href": "mailto:v_umrajkar@ma.iitr.ac.in",    "text": "Email Me",        "primary": false }
+      ]
+    },
+    "socials": [
+      { "label": "Github",        "href": "https://github.com/Enforcer03" },
+      { "label": "LinkedIn",      "href": "https://www.linkedin.com/in/ved-umrajkar-4530b6215" },
+      { "label": "GoogleScholar", "href": "https://scholar.google.com/citations?user=MgMpgRgAAAAJ&hl=en" },
+      { "label": "Twitter",       "href": "https://twitter.com/ved_umrajkar" }
+    ],
+    "links": {
+      "blog": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+  },
+
+  "education": [
+    {
+      "institution": "Indian Institute of Technology, Roorkee",
+      "dates": "2021 -- 2026",
+      "degree": "Bachelors and Masters, Mathematics and Computing",
+      "score": "CGPA: 8.605/10.0",
+      "coursework": "Statistical Machine Learning, Natural Language Processing, Stochastic Calculus, Design and Analysis of Algorithms, Mathematical Cryptography",
+      "timeline": {
+        "date": "2021",
+        "title": "IIT Roorkee",
+        "subtitle": "BS-MS, Mathematics & Computing",
+        "description": "Enrolled in the 5-year integrated program. CGPA 8.605. Specialised in ML, Financial Risk, and Statistical Inference.",
+        "tag": "Education"
+      }
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "PavoAI",
+      "role": "Research Intern",
+      "location": "Remote",
+      "dates": "Feb 2026 -- Present",
+      "bullets": [
+        "Co-authored **“Agentic Evidence Selection for Decision-Making under Cognitive Constraints”** (KDD 2026 Research Track) [Paper](https://openreview.net/forum?id=htLPjsQy8a&noteId=htLPjsQy8a), formalising task-agnostic evidence selection as a **constrained submodular optimisation** problem.",
+        "Designed a framework combining **semantic anchor-based importance scoring** and diversity-aware selection, achieving **95.4%** of theoretical maximum semantic coverage without any task supervision.",
+        "Showed that importance-based pre-filtering retains **98% semantic coverage using only the top 20%** of evidence, generalising the pipeline to corpus-based retrieval architectures."
+      ],
+      "timeline": {
+        "date": "Feb 2026",
+        "title": "PavoAI",
+        "subtitle": "Research Intern · Remote",
+        "description": "Co-authored 'Agentic Evidence Selection for Decision-Making under Cognitive Constraints' (KDD 2026 Research Track); formalised task-agnostic evidence selection as constrained submodular optimisation achieving 95.4% of theoretical maximum semantic coverage.",
+        "tag": "Research"
+      }
+    },
+    {
+      "company": "JPMorgan Chase",
+      "role": "Intern",
+      "location": "Bengaluru",
+      "dates": "May 2025 -- Jul 2025",
+      "bullets": [
+        "Implemented the core logic for a macroeconomic-indicator-driven **investment management fees forecasting model** and deployed it to production within the Data Science CoE.",
+        "Built granular **macroeconomic forecasting prototypes** with headcount sensitivity analysis to account for COVID-driven disparities and stress scenarios."
+      ],
+      "timeline": {
+        "date": "May 2025",
+        "title": "JPMorgan Chase",
+        "subtitle": "Software Engineering Intern · Bengaluru",
+        "description": "Productionised a macroeconomic-indicator-driven investment management fees forecasting model and built COVID-aware headcount sensitivity prototypes for Asset & Wealth Management. May – Jul 2025.",
+        "tag": "Industry"
+      }
+    },
+    {
+      "company": "Hashstack Finance",
+      "role": "Data Scientist",
+      "location": "Remote",
+      "dates": "Aug 2023 -- Feb 2024",
+      "bullets": [
+        "Built a real-time **risk management and analytics framework** with **Starknet**, **PostgreSQL**, and Streamlit to model debt health and solvency metrics.",
+        "Integrated mean-variance **portfolio optimization** into the backend to flag impermanent-loss risk, delivering a **15% lift in outlier detection accuracy**.",
+        "Designed a unified alert system and **growth analytics dashboard** integrating **Mixpanel**, **Google Analytics**, and on-chain Starknet data via Streamlit and Python."
+      ],
+      "timeline": {
+        "date": "Aug 2023",
+        "title": "Hashstack Finance",
+        "subtitle": "Data Scientist",
+        "description": "Built a Starknet risk dashboard, boosted anomaly coverage by 15% with a mean-variance optimiser, and shipped automated growth alerts. Aug 2023 – Feb 2024.",
+        "tag": "Industry"
+      }
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Tree Ring Watermark Detection in Rectified Flow Models",
+      "dates": "Jan 2025 -- Apr 2025",
+      "links": [
+        { "label": "Code",  "url": "https://example.com/code" },
+        { "label": "Paper", "url": "https://example.com/paper" }
+      ],
+      "bullets": [
+        "Benchmarked Tree Ring watermark detectability and false-positive rates on DDIM (Stable Diffusion 2.1) vs **rectified flow transformers** (FLUX.1-dev) using standardized perturbation budgets.",
+        "Diagnosed inversion instability in rectified flows (FlowEuler, OT-CFM) and proposed robust watermark recovery settings for **text-to-image safety pipelines**.",
+        "Presented empirical limits, dataset curation, and statistical separability results at **ICLR 2025**, Singapore Expo."
+      ],
+      "timeline": {
+        "date": "Jan 2025",
+        "title": "Tree Ring Watermarks",
+        "subtitle": "ICLR 2025 Workshop Paper",
+        "description": "Benchmarked Tree Ring watermark detectability on DDIM vs rectified flow transformers (FLUX.1-dev); diagnosed inversion instability and proposed robust recovery settings for text-to-image safety pipelines.",
+        "tag": "Research"
+      }
+    },
+    {
+      "title": "DAC-LoRA: Dynamic Adversarial Curriculum for VLMs",
+      "dates": "2025",
+      "links": [
+        { "label": "Code",  "url": "https://example.com/code" },
+        { "label": "Paper", "url": "https://example.com/paper" }
+      ],
+      "bullets": [
+        "Introduced **DAC-LoRA**: LoRA adapters trained with progressively stronger PGD attacks to harden CLIP-style VLMs, presented at the *Workshop on Safe Multimodal AI Systems, ICCV 2025*.",
+        "Balanced **robust accuracy** and adaptation cost via small-rank adapters and curriculum pacing, outperforming vanilla LoRA and single-stage adversarial fine-tuning on few-shot benchmarks."
+      ],
+      "timeline": {
+        "date": "2025",
+        "title": "DAC-LoRA",
+        "subtitle": "ICCV 2025 — Workshop on Safe Multimodal AI",
+        "description": "Dynamic Adversarial Curriculum for LoRA-based VLM fine-tuning, outperforming vanilla LoRA and single-stage adversarial training on few-shot benchmarks.",
+        "tag": "Research"
+      }
+    },
+    {
+      "title": "Multi-Modal (Video-Text) Person Re-Identification",
+      "dates": "Dec 2024 -- Present",
+      "links": [
+        { "label": "Code", "url": "https://example.com/code" }
+      ],
+      "bullets": [
+        "Building a video-text re-ID stack with tracklet encoders and a transformer text encoder, aligned via **contrastive and triplet losses** for open-vocabulary retrieval.",
+        "Running **ablation studies** on 5 benchmarks (MEVID, LSVID, ILIDS, Duke, G2A); reporting mAP/CMC gains from temporal pooling, query expansion, and hard-negative mining (ongoing)."
+      ],
+      "timeline": null
+    },
+    {
+      "title": "Voice Cloning with AutoRegressive Acoustic Models",
+      "dates": "Mar 2024 -- Apr 2024",
+      "links": [
+        { "label": "Code", "url": "https://example.com/code" }
+      ],
+      "bullets": [
+        "Developed automated voice clones converting text into discretized acoustic tokens using **Tortoise-TTS**, tuning softmax temperature and mel spectrogram synthesis for high-fidelity output.",
+        "Built a **Streamlit** app for real-time voice clone generation, allowing users to upload `.wav` files to create custom voices."
+      ],
+      "timeline": null
+    },
+    {
+      "title": "Multi-Risk Portfolio Optimization",
+      "dates": "Feb 2024 -- Apr 2024",
+      "links": [
+        { "label": "Code", "url": "https://example.com/code" }
+      ],
+      "bullets": [
+        "Constructed S&P 500 portfolios with **Riskfolio**, maximizing Sharpe ratio while enforcing turnover and sector exposure constraints to keep allocations realistic.",
+        "Stress-tested allocations using standard deviation, **CVaR**, **MDD**, and MAD to quantify tail risk and drawdown resilience.",
+        "Ran **Monte Carlo bootstraps** and log-normal simulations for forward-looking return bands and downside probability estimates."
+      ],
+      "timeline": null
+    },
+    {
+      "title": "ForecastPro",
+      "dates": "Mar 2023 -- Apr 2023",
+      "links": [
+        { "label": "Code", "url": "https://example.com/code" }
+      ],
+      "bullets": [
+        "Built a hybrid forecaster combining **LSTNet** with classical **ARIMA/SARIMAX** baselines to cover seasonal, trend, and sudden-shift patterns.",
+        "Engineered lagged covariates, holiday flags, and rolling statistics; tuned ConvLSTM windows to stabilize long-horizon predictions.",
+        "Evaluated on AirQuality UCI and Yahoo Finance with **MAPE**/RMSE, showing consistent lift over pure statistical models."
+      ],
+      "timeline": null
+    }
+  ],
+
+  "awards": [
+    {
+      "text": "Silver Medal at Inter-IIT Tech Meet 13.0 at IIT Bombay -- Built **AI-powered Product** for Dream11.",
+      "timeline": {
+        "date": "2024",
+        "title": "Inter-IIT Tech Meet 13.0",
+        "subtitle": "Silver Medal · IIT Bombay",
+        "description": "Silver medal building an AI-powered product for Dream11. Also placed 16th in Amazon ML Challenge 2024 (10,000+ candidates) and qualified for Citadel's India Terminal Coding competition.",
+        "tag": "Swag"
+      }
+    },
+    { "text": "Secured **16th Rank** in **Amazon ML Challenge 2024** (10,000+ candidates).",                                                  "timeline": null },
+    { "text": "Qualified for India Terminal Coding competition hosted by Correlation One in partnership with Citadel Securities.",        "timeline": null },
+    { "text": "All India Rank **342** in KVPY Fellowship Examination.",                                                                  "timeline": null },
+    { "text": "State Topper from Maharashtra in Astronomy Olympiad (IOQA-2020).",                                                        "timeline": null },
+    { "text": "Rated **Expert on Kaggle** (top **1%**, Global Rank 1890, handle: vedumrajkar).",                                          "timeline": null },
+    { "text": "Awarded the INSPIRE Scholarship by the Government of India for undergraduates in research.",                              "timeline": null },
+    { "text": "All India Rank **1336** in JEE Advanced (**Top 0.2%** of all candidates).",                                                "timeline": null },
+    {
+      "text": "Attended ICLR 2025 in Singapore; presented Tree Ring watermark workshop paper at Singapore Expo.",
+      "include_in_resume": false,
+      "timeline": {
+        "date": "Apr 2025",
+        "title": "ICLR 2025",
+        "subtitle": "Singapore · Conference",
+        "description": "Attended the International Conference on Learning Representations. Presented Tree Ring watermark workshop paper at Singapore Expo.",
+        "tag": "Swag"
+      }
+    }
+  ],
+
+  "volunteering": [
+    {
+      "org": "Data Science Group, IIT Roorkee",
+      "role": "Joint Secretary",
+      "location": "",
+      "dates": "Dec 2023 -- May 2025",
+      "bullets": [
+        "Mentored students pursuing careers in **machine learning**, fostering a campus community around applied AI.",
+        "Coordinated campus projects and events, hosting **data science workshops** and managing member recruitment.",
+        "Hosted a two-week **supervised learning** hackathon on the UCI Gesture Phase Segmentation dataset."
+      ],
+      "timeline": {
+        "date": "2023–25",
+        "title": "Data Science Group, IIT Roorkee",
+        "subtitle": "Joint Secretary",
+        "description": "Mentored students in ML, coordinated campus projects and workshops, and hosted a supervised-learning hackathon on the UCI Gesture Phase Segmentation dataset.",
+        "tag": "Swag"
+      }
+    }
+  ],
+
+  "skills": [
+    { "label": "Areas of Interest",     "items": "Generative AI (GANs, Diffusion Models), Large Language Models (LLMs), Machine Learning, Computer Vision, Multimodal Learning" },
+    { "label": "Languages",             "items": "Python, C++, SQL" },
+    { "label": "Frameworks/Libraries",  "items": "PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, NLTK, Hugging Face, Streamlit" }
+  ]
+}

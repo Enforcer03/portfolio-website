@@ -14,7 +14,7 @@ import {
   Social,
   TimelineAchievement,
 } from './dataDef';
-import profile from './profile.json';
+import resume from './resume.json';
 
 /**
  * Parses **bold** markers in a string into JSX with <strong> elements.
@@ -31,7 +31,7 @@ function parseBold(text: string): JSX.Element {
 /**
  * Page meta data
  */
-export const homePageMeta: HomepageMeta = profile.meta;
+export const homePageMeta: HomepageMeta = resume.website.meta;
 
 /**
  * Section definition
@@ -60,21 +60,21 @@ const actionIconMap: Record<string, typeof ArrowDownTrayIcon> = {
 };
 
 /**
- * Hero section — sourced from profile.json
+ * Hero section — sourced from resume.json
  */
 export const heroData: Hero = {
   imageSrc: profilepic,
-  name: profile.hero.name,
+  name: resume.basics.name,
   description: (
     <>
-      {profile.hero.paragraphs.map((p, i) => (
+      {resume.website.hero.paragraphs.map((p, i) => (
         <p className="prose-sm text-neutral-700 dark:text-stone-200 sm:prose-base lg:prose-lg" key={i}>
           {parseBold(p)}
         </p>
       ))}
     </>
   ),
-  actions: profile.hero.actions.map(({href, text, primary, icon}) => ({
+  actions: resume.website.hero.actions.map(({href, text, primary, icon}) => ({
     href,
     text,
     primary,
@@ -83,7 +83,7 @@ export const heroData: Hero = {
 };
 
 /**
- * Social links — sourced from profile.json
+ * Social links — sourced from resume.json
  */
 const socialIconMap: Record<string, Social['Icon']> = {
   Github: GithubIcon,
@@ -92,32 +92,46 @@ const socialIconMap: Record<string, Social['Icon']> = {
   Twitter: TwitterIcon,
 };
 
-export const socialLinks: Social[] = profile.socials
+export const socialLinks: Social[] = resume.website.socials
   .filter(({label}) => label in socialIconMap)
   .map(({label, href}) => ({label, Icon: socialIconMap[label], href}));
 
 /**
- * Achievements timeline — sourced from profile.json
+ * Achievements timeline — derived from inline `timeline` keys on resume entries.
+ * Any education / experience / project / award / volunteering item that defines
+ * a non-null `timeline` block contributes a card. Declaration order in
+ * resume.json determines order on the page.
  */
-export const achievementsTimeline: TimelineAchievement[] = profile.timeline;
+type WithTimeline = {timeline?: TimelineAchievement | null};
+
+const collectTimeline = (items: ReadonlyArray<WithTimeline>): TimelineAchievement[] =>
+  items.map(i => i.timeline).filter((t): t is TimelineAchievement => t != null);
+
+export const achievementsTimeline: TimelineAchievement[] = [
+  ...collectTimeline(resume.education),
+  ...collectTimeline(resume.volunteering),
+  ...collectTimeline(resume.experience),
+  ...collectTimeline(resume.awards),
+  ...collectTimeline(resume.projects),
+];
 
 /**
  * About section (kept for the /about page layout)
  */
 export const aboutData: About = {
   profileImageSrc: undefined,
-  description: profile.hero.paragraphs.join(' ').replace(/\*\*(.+?)\*\*/g, '$1'),
-  achievements: profile.timeline.map(t => `${t.title} — ${t.description}`),
+  description: resume.website.hero.paragraphs.join(' ').replace(/\*\*(.+?)\*\*/g, '$1'),
+  achievements: achievementsTimeline.map(t => `${t.title} — ${t.description}`),
   aboutItems: [],
 };
 
 /**
- * External site links — sourced from profile.json
+ * External site links — sourced from resume.json
  */
-export const siteLinks = profile.links;
+export const siteLinks = resume.website.links;
 
 /**
- * Contact section — sourced from profile.json
+ * Contact section — sourced from resume.json
  */
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
@@ -125,8 +139,8 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: profile.contact.email,
-      href: `mailto:${profile.contact.email}`,
+      text: resume.basics.email,
+      href: `mailto:${resume.basics.email}`,
     },
   ],
 };

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "yarn compile && yarn next build",
+    "build:resume": "node scripts/build-resume.mjs",
     "clean": "rm -rf build-tsc .next",
     "compile": "yarn run -T tsc --build --verbose",
     "dev": "yarn compile && yarn next dev",
